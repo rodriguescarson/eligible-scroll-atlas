@@ -32,7 +32,7 @@ carry its CC BY-NC 4.0 terms.
 
 ## Status (15 Sep 2026)
 
-* Renders: all 340 meshes rendered into the team's segment layout (69 GB zstd, 0 failures), uploading to
+* Renders: all 340 meshes rendered into the team's segment layout (69 GB zstd, 0 failures), **all 340 uploaded** (one `surface-volumes.tar` per mesh) to
   [rodriguescarson/eligible-scroll-atlas-renders](https://huggingface.co/datasets/rodriguescarson/eligible-scroll-atlas-renders)
   together with the raw ink_9um maps as they are produced (three checkpoint files, both layer directions).
 * Controls: done before any eligible mesh was scored, see `control/RESULT.md`. The known-ink control fails the v1
