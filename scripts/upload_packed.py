@@ -9,6 +9,10 @@ from huggingface_hub import HfApi, CommitOperationAdd
 W = "/workspace/atlas"; R = f"{W}/renders"; ST = f"{W}/upload"; os.makedirs(f"{ST}/stage", exist_ok=True)
 REPO = os.environ.get("HF_REPO", "rodriguescarson/eligible-scroll-atlas-renders")
 LOG = f"{W}/log/upload.log"; DONE = f"{ST}/uploaded.txt"; DONE_F = f"{ST}/uploaded_files.txt"
+# HOLD_MAPS: while this file exists no ink-detection file is published (PREREG: a mesh that passes the screens
+# is not shown publicly). If inference has finished and the hold is still in place 3 h later, everything is
+# uploaded to a PRIVATE repo instead and the pod stops, so the only copy never sits on an idle pod.
+HOLD = f"{ST}/HOLD_MAPS"; HELD_REPO = os.environ.get("HF_HELD_REPO", "rodriguescarson/eligible-scroll-atlas-held")
 def log(m): open(LOG, "a").write(f"{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} {m}\n")
 def readset(p): return set(open(p).read().split()) if os.path.exists(p) else set()
 api = HfApi(token=open(f"{W}/.hf_token").read().strip())
@@ -49,6 +53,23 @@ while True:
             n_new += len(batch)
         for t in tars: os.remove(t)
     log(f"render tars: +{n_new}, total {len(done) + n_new} of {len(queue)}")
+    finished = os.path.exists(f"{W}/infer/progress.log") and "ALL DONE" in open(f"{W}/infer/progress.log").read()
+    if os.path.exists(HOLD):
+        log("ink-detection pass skipped: HOLD_MAPS in place")
+        if finished:
+            fa = f"{ST}/finished_at"
+            if not os.path.exists(fa): open(fa, "w").write(str(time.time()))
+            if time.time() - float(open(fa).read()) > 3 * 3600:
+                log("hold not released 3 h after inference finished: uploading everything to the private repo")
+                api.create_repo(HELD_REPO, repo_type="dataset", private=True, exist_ok=True)
+                api.upload_large_folder(repo_id=HELD_REPO, folder_path=R, repo_type="dataset", num_workers=4, allow_patterns=["*/ink-detection/*"])
+                api.upload_large_folder(repo_id=HELD_REPO, folder_path=f"{W}/control", repo_type="dataset", num_workers=4)
+                remote = api.list_repo_files(HELD_REPO, repo_type="dataset")
+                n_rec = sum(1 for f in remote if f.endswith("ink-detection/infer.json")); n_loc = len(glob.glob(f"{R}/*/*/ink-detection/infer.json"))
+                log(f"private FINAL: receipts remote {n_rec} / local {n_loc}")
+                if n_rec >= n_loc:
+                    log("verified in private repo, stopping pod"); subprocess.run(["runpodctl", "stop", "pod", os.environ.get("RUNPOD_POD_ID", "qeg3surfkcuqin")]); sys.exit(0)
+        time.sleep(600); continue
     donef = readset(DONE_F)
     files = [p for p in glob.glob(f"{R}/*/*/ink-detection/*") if ALLOW.search(p) and os.path.relpath(p, R) not in donef]
     if os.path.exists(f"{R}/README.md") and "README.md" not in donef: files.append(f"{R}/README.md")
@@ -60,7 +81,6 @@ while True:
             with open(DONE_F, "a") as f: f.write("".join(os.path.relpath(p, R) + "\n" for p in batch))
             n_f += len(batch)
     log(f"ink-detection files: +{n_f}, total {len(donef) + n_f}")
-    finished = os.path.exists(f"{W}/infer/progress.log") and "ALL DONE" in open(f"{W}/infer/progress.log").read()
     if finished and not pending[n_new:] and not files[n_f:]:
         remote = api.list_repo_files(REPO, repo_type="dataset")
         n_tar = sum(1 for f in remote if f.endswith("surface-volumes.tar")); n_rec = sum(1 for f in remote if f.endswith("ink-detection/infer.json"))

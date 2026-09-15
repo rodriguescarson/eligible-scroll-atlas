@@ -14,7 +14,7 @@ rows = []
 for side in sorted(glob.glob(os.path.join(a.renders, "*", "*", "ink-detection", "infer.json"))):
     d = os.path.dirname(side); mesh = os.path.basename(os.path.dirname(d)); scroll = os.path.basename(os.path.dirname(os.path.dirname(d)))
     key = f"{scroll}_{mesh}"; g = gates.get(key, {}); um = 8.64 if scroll in ("PHerc0800", "PHerc0268") else 9.362
-    sj = os.path.join(d, "screens.json")
+    sj = os.path.join(d, os.environ.get("SCREENS_JSON", "screens.json"))
     if os.path.exists(sj) and not a.force: r = json.load(open(sj))
     else:
         try: r = screens(d, um, a.control_s1, os.path.join(d, "valid_mask.tif"))

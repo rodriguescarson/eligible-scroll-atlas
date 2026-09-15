@@ -1,5 +1,5 @@
 ---
-license: mit
+license: cc-by-nc-4.0
 pretty_name: Eligible scroll atlas renders
 ---
 
@@ -31,5 +31,13 @@ volume by URL. `--flip-normals` is the setting that reproduces the team's own PH
 --blend-mode hann --direction both`, checkpoints `hybrid_3d2d-seed43/step-060000` (`s43_060k`), `hybrid_3d2d-seed42/step-020000`
 (`s42_020k`) and a uniform weight average of seed42 steps 10000/20000/30000 (`soup42_early3`, recipe in `scripts/soup42.py`).
 
-These are raw model outputs, not detections. Nothing here has been claimed as text. Derived from Vesuvius Challenge open data
-(their data agreement applies to the underlying scans); the derived files and code are MIT.
+These are raw model outputs, not detections. Nothing here has been claimed as text.
+
+Licence: the renders and maps are derived from Vesuvius Challenge open data, which is released under
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); these files carry the same terms. The code in the GitHub
+repository is MIT.
+
+Maps are published scroll by scroll after the pre-registered screens have run on them; a mesh that passes the screens
+is listed with its scores only and its images go to the Scroll Prize team first (PREREG, "Outcomes").
+
+The known-ink control (PHerc0139 w043) and the two planted-window controls are under `controls/`.

@@ -29,15 +29,17 @@ carry its CC BY-NC 4.0 terms.
 | 15 Sep 2026 | reproduction of a team-published PHerc0800 surface volume from its mesh: `--flip-normals` matches at r = 1.0000, mean abs diff 0.003 (`repro/PHerc0800_reproduction.md`) |
 
 **Amendment 1** (15 Sep, filed before any eligible mesh was scored): the positive control fails S4 under the v1 wording by 0.9 points; v1 stands as primary (no ranking), v2 evaluates S4 per file. `prereg/AMENDMENT-1.md` sha256 `eef19198383bbee3cfa60418b2f175c281ea31759d5b067cd2926498e1b86d2a`.
+**Amendment 2** (15 Sep, filed before the remaining 245 meshes were scored and before the PHerc0800 rescore was read): the screens used raw probabilities instead of TAUIL's rescaled ones; on the pre-registered scale the control passes all four screens; Amendment 1's mechanism is withdrawn; w043 is training data. `prereg/AMENDMENT-2.md` sha256 `c0d8056c8d042019bfa49caf868463c4eb962a07b260803b83055ebf944ca798`.
 
 ## Status (15 Sep 2026)
 
 * Renders: all 340 meshes rendered into the team's segment layout (69 GB zstd, 0 failures), **all 340 uploaded** (one `surface-volumes.tar` per mesh) to
   [rodriguescarson/eligible-scroll-atlas-renders](https://huggingface.co/datasets/rodriguescarson/eligible-scroll-atlas-renders)
   together with the raw ink_9um maps as they are produced (three checkpoint files, both layer directions).
-* Controls: done before any eligible mesh was scored, see `control/RESULT.md`. The known-ink control fails the v1
-  stroke-scale screen by 0.9 points (the intersection of two seeds fragments strokes), so **no ranking is published
-  under v1**; `prereg/AMENDMENT-1.md` (tag `prereg-v2`) fixes the secondary analysis. The planted 4 cm² window is
-  flagged at 54× inside/outside.
+* Controls: see `control/RESULT.md`. **Correction (Amendment 2, tag `prereg-v3`):** our screens first ran on raw
+  probabilities instead of TAUIL's rescaled scale. On the pre-registered scale the known-ink control passes all four
+  screens, and Amendment 1's explanation for its S4 failure is withdrawn. The control segment (w043) is ink_9um training
+  data, so an out-of-training control (w042) is being added. The planted 4 cm2 window was flagged at 54x and 997x on the
+  old scale and is being re-evaluated.
 * Inference over the 340 meshes is running (`scripts/infer_v2.sh`); per-mesh screen scores, the pscamillo
   comparison (`scripts/compare_pscamillo.py`) and the v2 list follow when it finishes.

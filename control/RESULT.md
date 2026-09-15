@@ -1,5 +1,12 @@
 # Controls: result (15 Sep 2026)
 
+> **Correction, 15 Sep 2026 (`prereg/AMENDMENT-2.md`).** The screens in this file were computed on raw probabilities
+> (uint8 >= 192). The pre-registered rule, TAUIL's, rescales first (uint8 >= 160). On that scale the known-ink control
+> passes all four screens (S1 0.0549, reverse 0.0056, S3 4.79 mm at 15.2x, S4 0.691), and the explanation given below for
+> the S4 failure is withdrawn. w043 is also an ink_9um training segment, so both controls overstate sensitivity on unseen
+> scrolls; an out-of-training control (PHerc0139 w042) is being added.
+
+
 Both controls ran before any eligible mesh was scored. Files in this directory are copied unchanged from the pod
 (`/workspace/atlas/control`, `/workspace/atlas/planted`); the raw maps (uint8 TIFF, 6120×8120) are in the HF renders
 repo alongside the eligible meshes.
@@ -67,6 +74,9 @@ the v1 S4 failure on the full sheet comes from the fainter regions, where the se
 leaves specks.
 
 ## Instrument verdict
+
+*Superseded by Amendment 2: on the pre-registered scale control 1 passes; control 2 is being re-evaluated on that scale.*
+
 
 * v1 (primary): fails, on control 1's S4 alone; renders, maps and every per-mesh screen score are published, no ranking.
 * v2 (secondary): passes both controls (control 2 in both runs).

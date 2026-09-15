@@ -5,6 +5,8 @@ S1 coverage = frac(valid & p_min>=0.75).  S2 ratio = S1/S1(control) within 5x.  
 row-stacking axis (image rows) with prominence > 1.2x background.  S4 = components of p_min>=0.75 with area 0.3-2 mm2
 carry the majority of S1 mass.  Pass = S1..S4 forward and S1(forward) - S1(reverse) > 0."""
 import argparse, glob, json, os, numpy as np, tifffile
+# hit threshold on the raw map (p = uint8/255). 0.75 = PREREG v1 as implemented. TAUIL rescales (p - 0.25)/0.5 > 0.75, i.e. uint8 >= 160: SCREEN_THR=0.627
+THR = float(os.environ.get("SCREEN_THR", "0.75"))
 from scipy import ndimage, signal
 
 def load(p):
@@ -63,20 +65,20 @@ def screens(d, um, control_s1=None, maskp=None, mask_zarr=None):
     elif maskp and os.path.exists(maskp):
         mk = tifffile.imread(maskp) != 0; valid[:] = False
         h, w = min(mk.shape[0], pm.shape[0]), min(mk.shape[1], pm.shape[1]); valid[:h, :w] = mk[:h, :w]
-    hit = valid & (pm >= 0.75)
+    hit = valid & (pm >= THR)
     s1 = float(hit.sum() / max(valid.sum(), 1))
-    s1_mean3 = float(np.mean([((m >= 0.75) & valid).sum() / max(valid.sum(), 1) for m in ms]))
-    r = {"files_forward": [os.path.basename(f) for f in fw], "valid_px": int(valid.sum()), "voxel_um": um,
+    s1_mean3 = float(np.mean([((m >= THR) & valid).sum() / max(valid.sum(), 1) for m in ms]))
+    r = {"files_forward": [os.path.basename(f) for f in fw], "valid_px": int(valid.sum()), "voxel_um": um, "hit_threshold_raw": THR,
          "S1": s1, "S1_mean_over_files": s1_mean3}
     if rv:
-        pmr, _ = pmin(rv); hr = valid[:pmr.shape[0], :pmr.shape[1]] & (pmr >= 0.75)
+        pmr, _ = pmin(rv); hr = valid[:pmr.shape[0], :pmr.shape[1]] & (pmr >= THR)
         r["S1_reverse"] = float(hr.sum() / max(valid.sum(), 1)); r["S1_fwd_minus_rev"] = s1 - r["S1_reverse"]
     if control_s1 is not None:
         r["S2_ratio"] = s1 / control_s1 if control_s1 > 0 else None
         r["S2_pass"] = bool(control_s1 > 0 and 0.2 <= s1 / control_s1 <= 5.0)
     r["S3"] = periodicity(hit, valid, um); r["S4"] = stroke_scale(hit, um)
     # v2 (AMENDMENT-1, filed before any eligible mesh was scored): S4 evaluated on each file's own >=0.75 mask
-    r["S4_per_file"] = [stroke_scale(valid & (m >= 0.75), um) for m in ms]
+    r["S4_per_file"] = [stroke_scale(valid & (m >= THR), um) for m in ms]
     r["S4_v2_pass"] = bool(all(x["pass"] for x in r["S4_per_file"]))
     common = bool(s1 > 0 and r.get("S2_pass", True) and r["S3"]["pass"] and r.get("S1_fwd_minus_rev", 1) > 0)
     r["pass"] = bool(common and r["S4"]["pass"])
