@@ -1,0 +1,6 @@
+START 2026-09-15T14:08:21Z target=/workspace/atlas/renders/PHerc0813/z6496_w040/surface-volumes/9.362um-1.2m-113keV-volume-20250821151723.zarr
+DONE step-060000 rc=0 secs=240
+DONE step-020000 rc=0 secs=160
+DONE soup42_early3 rc=0 secs=157
+EVAL rc=0
+ALL DONE 2026-09-15T14:19:30Z

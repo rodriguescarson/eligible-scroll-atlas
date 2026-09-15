@@ -1,0 +1,30 @@
+{
+ "control_zarr": "/workspace/atlas/control/w043.zarr",
+ "target_zarr": "/workspace/atlas/renders/PHerc0813/z6496_w040/surface-volumes/9.362um-1.2m-113keV-volume-20250821151723.zarr",
+ "um": 9.362,
+ "window_px": [
+  1764,
+  2587
+ ],
+ "window_cm2": 3.999744805885921,
+ "control_box_yx": [
+  3853,
+  2091
+ ],
+ "control_box_hit_mass": 167876,
+ "control_box_valid_frac": 1.0,
+ "target_box_yx": [
+  50,
+  2190
+ ],
+ "target_box_valid_frac": 0.49729898401829487,
+ "layers_placed": [
+  1,
+  29
+ ],
+ "control_maps_used": [
+  "w043_hybrid_3d2d-seed42_step-020000.tif",
+  "w043_hybrid_3d2d-seed43_step-060000.tif",
+  "w043_soup42_early3.tif"
+ ]
+}

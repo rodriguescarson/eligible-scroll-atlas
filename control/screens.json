@@ -1,0 +1,26 @@
+{
+ "files_forward": [
+  "w043_hybrid_3d2d-seed42_step-020000.tif",
+  "w043_hybrid_3d2d-seed43_step-060000.tif",
+  "w043_soup42_early3.tif"
+ ],
+ "valid_px": 41578614,
+ "voxel_um": 9.362,
+ "S1": 0.012002444333522036,
+ "S1_mean_over_files": 0.031810223399943056,
+ "S1_reverse": 0.0002440196780008107,
+ "S1_fwd_minus_rev": 0.011758424655521224,
+ "S3": {
+  "period_mm": 4.793344,
+  "prominence": 10.5615481089297,
+  "pass": true,
+  "rows": 5872
+ },
+ "S4": {
+  "components": 4531,
+  "mass_in_band": 0.49057299441934094,
+  "pass": false,
+  "median_area_mm2": 8.764704400000001e-05
+ },
+ "pass": false
+}

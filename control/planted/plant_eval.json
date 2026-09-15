@@ -1,0 +1,56 @@
+{
+ "S1_in_window": 0.03450996782568004,
+ "S1_outside": 0.000637793346824399,
+ "ratio_in_over_out": 54.10838478875122,
+ "hit_mass_share_in_window": 0.9912505751613938,
+ "window_area_share": 0.6767750072358092,
+ "flagged": true,
+ "screens_on_spliced": {
+  "files_forward": [
+   "spliced-ink9um-soup42_early3.tif",
+   "spliced-ink9um-step-020000.tif",
+   "spliced-ink9um-step-060000.tif"
+  ],
+  "valid_px": 6087778,
+  "voxel_um": 9.362,
+  "S1": 0.023561634474844516,
+  "S1_mean_over_files": 0.050703776210849566,
+  "S1_reverse": 0.00040326700480865105,
+  "S1_fwd_minus_rev": 0.023158367470035864,
+  "S3": {
+   "period_mm": 4.217581,
+   "prominence": 4.343213931290969,
+   "pass": true,
+   "rows": 1802
+  },
+  "S4": {
+   "components": 928,
+   "mass_in_band": 0.6356125991717677,
+   "pass": true,
+   "median_area_mm2": 8.764704400000001e-05
+  },
+  "S4_per_file": [
+   {
+    "components": 2821,
+    "mass_in_band": 0.7388343937511315,
+    "pass": true,
+    "median_area_mm2": 8.764704400000001e-05
+   },
+   {
+    "components": 1293,
+    "mass_in_band": 0.6970751248422324,
+    "pass": true,
+    "median_area_mm2": 8.764704400000001e-05
+   },
+   {
+    "components": 892,
+    "mass_in_band": 0.6136129088551305,
+    "pass": true,
+    "median_area_mm2": 8.764704400000001e-05
+   }
+  ],
+  "S4_v2_pass": true,
+  "pass": true,
+  "pass_v2": true
+ }
+}
