@@ -1,0 +1,12 @@
+sh: symbol lookup error: /tmp/appimage_extracted_d601fb96c77a58e07cc036b81dff833a/usr/lib/libc.so.6: undefined symbol: __tunable_is_initialized, version GLIBC_PRIVATE
+  tile-row 1/14 (7%)  7.2 chunks/s  0m14s  eta 3m05s  tile-row 2/14 (14%)  4.6 chunks/s  0m44s  eta 4m26s  tile-row 3/14 (21%)  3.0 chunks/s  1m41s  eta 6m13s  tile-row 4/14 (28%)  2.4 chunks/s  2m46s  eta 6m57s  tile-row 5/14 (35%)  2.1 chunks/s  4m00s  eta 7m12s  tile-row 6/14 (42%)  2.0 chunks/s  5m03s  eta 6m45s  tile-row 7/14 (50%)  2.0 chunks/s  5m57s  eta 5m57s  tile-row 8/14 (57%)  2.0 chunks/s  6m57s  eta 5m13s  tile-row 9/14 (64%)  2.0 chunks/s  7m38s  eta 4m14s  tile-row 10/14 (71%)  2.1 chunks/s  8m06s  eta 3m14s  tile-row 11/14 (78%)  2.2 chunks/s  8m26s  eta 2m18s  tile-row 12/14 (85%)  2.3 chunks/s  8m50s  eta 1m28s  tile-row 13/14 (92%)  2.5 chunks/s  8m59s  eta 0m41s  tile-row 14/14 (100%)  2.6 chunks/s  9m01s  eta 0m00s
+Remote zarr streaming: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr
+zarr dataset size for group 0 [24298 9867 9867 ]
+Source dtype: uint8
+chunk shape [128 128 128 ]
+Voxel size (from CLI): 8.64 micrometer
+Flip normals: on
+Timeout: 60 minutes
+Rendering: /workspace/atlas/meshes/PHerc0800/z17072_w100 -> /workspace/atlas/bw/PHerc0800_z17072_w100.zarr (zarr)
+ds_level=0 ds_scale=1 sA=1 Pg=1 render_scale=1
+rendering 13040x1740 at scale 1 crop [13040×1740 from (0,0)]

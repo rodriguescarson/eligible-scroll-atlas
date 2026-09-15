@@ -1,0 +1,8 @@
+START single 12:48:42
+DONE PHerc0813/z12496_w100 rc=0 secs=470 chunks_added=2688 12:56:35
+START 4way 12:56:35
+DONE PHerc0211/z9120_w100 rc=0 secs=219 chunks_added=4649 13:00:20
+DONE PHerc0125/z6944_w080 rc=0 secs=380 chunks_added=6572 13:03:02
+DONE PHerc0813/z11296_w100 rc=0 secs=507 chunks_added=7270 13:05:10
+DONE PHerc0800/z17072_w100 rc=0 secs=556 chunks_added=7350 13:06:00
+ALL DONE 13:06:00
