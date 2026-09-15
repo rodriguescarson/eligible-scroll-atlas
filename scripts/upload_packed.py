@@ -12,7 +12,11 @@ LOG = f"{W}/log/upload.log"; DONE = f"{ST}/uploaded.txt"
 def log(m):
     open(LOG, "a").write(f"{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} {m}\n")
 api = HfApi(token=open(f"{W}/.hf_token").read().strip())
-api.create_repo(REPO, repo_type="dataset", exist_ok=True)
+for attempt in range(20):
+    try:
+        api.create_repo(REPO, repo_type="dataset", exist_ok=True); break
+    except Exception as e:
+        log(f"create_repo retry {attempt + 1}: {str(e)[:120]}"); time.sleep(90)
 log(f"repo ready {REPO}")
 queue = [l.split() for l in open(f"{W}/render/queue.txt")]
 while True:
