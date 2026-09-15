@@ -44,10 +44,29 @@ maps) at layers 1–29 of 31, target box y=50, x=2190; then the identical recipe
 | window share of the valid area | 0.677 |
 | screens on the spliced volume (unanimous minimum) | S1 0.0236, reverse 0.0004, S3 4.22 mm at 4.3×, S4 0.636; pass v1 and v2 |
 
-Verdict: **flagged**. Caveat: the window is 68 % of that target's valid area; a second run into the largest
-9.362 µm canvas (`PHerc0813/z4704_w100`, 2420×12940 px) is in progress and will be appended here whichever way it goes.
+Verdict: **flagged**. Caveat: the window is 68 % of that target's valid area, so a second run was made.
+
+### Control 2b: the same window into the largest 9.362 µm canvas
+
+`PHerc0813/z4704_w100` (2420×12940 px; the box with the highest valid fraction in that render is 45 % valid, so the
+window is a minority, 36 %, of the valid area). Window 2136×2137 px from control box y=3381, x=3215 (the box holding
+the most p_min ≥ 0.75 mass under the three maps); target box y=0, x=5500. `planted2/`.
+
+| | value |
+|---|---:|
+| S1 inside the window | 0.0394 |
+| S1 outside the window | 0.00004 |
+| ratio inside / outside | **997×** |
+| share of the spliced volume's hit mass inside the window | **0.998** |
+| window share of the valid area | 0.362 |
+| screens on the spliced volume (unanimous minimum) | S1 0.0143, reverse 0.0002, S3 4.97 mm at 10.1×, S4 0.695; pass v1 and v2 |
+
+Verdict: **flagged**, both runs. One thing the two runs show that the whole-sheet control did not: inside the densest
+4 cm² of w043, the three files agree well enough that the unanimous minimum keeps whole strokes (S4 0.64 and 0.70), so
+the v1 S4 failure on the full sheet comes from the fainter regions, where the seeds disagree and the intersection
+leaves specks.
 
 ## Instrument verdict
 
 * v1 (primary): fails, on control 1's S4 alone; renders, maps and every per-mesh screen score are published, no ranking.
-* v2 (secondary): passes both controls.
+* v2 (secondary): passes both controls (control 2 in both runs).

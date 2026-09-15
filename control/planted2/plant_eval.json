@@ -1,0 +1,56 @@
+{
+ "S1_in_window": 0.0394089767204929,
+ "S1_outside": 3.9531095324294985e-05,
+ "ratio_in_over_out": 996.9108216506454,
+ "hit_mass_share_in_window": 0.9982337789770637,
+ "window_area_share": 0.3618101756418248,
+ "flagged": true,
+ "screens_on_spliced": {
+  "files_forward": [
+   "spliced-ink9um-soup42_early3.tif",
+   "spliced-ink9um-step-020000.tif",
+   "spliced-ink9um-step-060000.tif"
+  ],
+  "valid_px": 11415732,
+  "voxel_um": 9.362,
+  "S1": 0.01428379713188782,
+  "S1_mean_over_files": 0.031345223124252274,
+  "S1_reverse": 0.00024203441356191612,
+  "S1_fwd_minus_rev": 0.014041762718325903,
+  "S3": {
+   "period_mm": 4.966541,
+   "prominence": 10.144212908484706,
+   "pass": true,
+   "rows": 2122
+  },
+  "S4": {
+   "components": 1002,
+   "mass_in_band": 0.6949405126947137,
+   "pass": true,
+   "median_area_mm2": 8.764704400000001e-05
+  },
+  "S4_per_file": [
+   {
+    "components": 3084,
+    "mass_in_band": 0.6993274803998989,
+    "pass": true,
+    "median_area_mm2": 8.764704400000001e-05
+   },
+   {
+    "components": 1588,
+    "mass_in_band": 0.7441457275306637,
+    "pass": true,
+    "median_area_mm2": 8.764704400000001e-05
+   },
+   {
+    "components": 1207,
+    "mass_in_band": 0.5578021350717001,
+    "pass": true,
+    "median_area_mm2": 8.764704400000001e-05
+   }
+  ],
+  "S4_v2_pass": true,
+  "pass": true,
+  "pass_v2": true
+ }
+}
