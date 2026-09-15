@@ -11,10 +11,10 @@ export HF_TOKEN=$(cat $W/.hf_token); export HF_HUB_ENABLE_HF_TRANSFER=0
 uvx --from huggingface_hub hf repo create $REPO --repo-type dataset >> $L 2>&1
 log "repo ready $REPO"
 while true; do
-  uvx --from huggingface_hub hf upload-large-folder $REPO $W/renders --repo-type dataset --num-workers 6 >> $W/log/upload_pass.out 2>&1; rc=$?
+  uvx --from huggingface_hub hf upload-large-folder $REPO $W/renders --repo-type dataset --num-workers 6 --exclude "*/screens.json" --exclude "*/plant_eval.json" >> $W/log/upload_pass.out 2>&1; rc=$?
   log "pass rc=$rc local_files=$(find $W/renders -type f | wc -l) size=$(du -sh $W/renders | cut -f1)"
   if grep -q "ALL DONE" $P 2>/dev/null; then
-    uvx --from huggingface_hub hf upload-large-folder $REPO $W/renders --repo-type dataset --num-workers 6 >> $W/log/upload_pass.out 2>&1; rc=$?
+    uvx --from huggingface_hub hf upload-large-folder $REPO $W/renders --repo-type dataset --num-workers 6 --exclude "*/screens.json" --exclude "*/plant_eval.json" >> $W/log/upload_pass.out 2>&1; rc=$?
     n_local=$(find $W/renders -type f | wc -l)
     n_remote=$(uvx --from huggingface_hub python -c "from huggingface_hub import HfApi; print(len(HfApi().list_repo_files('$REPO', repo_type='dataset')))" 2>/dev/null)
     log "FINAL rc=$rc local=$n_local remote=$n_remote"
