@@ -1,0 +1,11 @@
+sh: symbol lookup error: /tmp/appimage_extracted_d601fb96c77a58e07cc036b81dff833a/usr/lib/libc.so.6: undefined symbol: __tunable_is_initialized, version GLIBC_PRIVATE
+  tile-row 1/17 (5%)  1.6 chunks/s  0m10s  eta 2m55s  tile-row 2/17 (11%)  1.6 chunks/s  0m22s  eta 2m47s  tile-row 3/17 (17%)  1.5 chunks/s  0m36s  eta 2m52s  tile-row 4/17 (23%)  1.6 chunks/s  0m45s  eta 2m26s  tile-row 5/17 (29%)  1.6 chunks/s  0m56s  eta 2m16s  tile-row 6/17 (35%)  1.5 chunks/s  1m10s  eta 2m09s  tile-row 7/17 (41%)  1.6 chunks/s  1m19s  eta 1m53s  tile-row 8/17 (47%)  1.4 chunks/s  1m42s  eta 1m55s  tile-row 9/17 (52%)  1.3 chunks/s  2m00s  eta 1m47s  tile-row 10/17 (58%)  1.4 chunks/s  2m08s  eta 1m30s  tile-row 11/17 (64%)  1.4 chunks/s  2m18s  eta 1m15s  tile-row 12/17 (70%)  1.5 chunks/s  2m25s  eta 1m00s  tile-row 13/17 (76%)  1.5 chunks/s  2m37s  eta 0m48s  tile-row 14/17 (82%)  1.5 chunks/s  2m45s  eta 0m35s  tile-row 15/17 (88%)  1.6 chunks/s  2m51s  eta 0m22s  tile-row 16/17 (94%)  1.6 chunks/s  2m55s  eta 0m10s  tile-row 17/17 (100%)  1.7 chunks/s  2m57s  eta 0m00s
+Remote zarr streaming: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr
+zarr dataset size for group 0 [24298 9867 9867 ]
+Source dtype: uint8
+chunk shape [128 128 128 ]
+Voxel size (from CLI): 8.64 micrometer
+Timeout: 60 minutes
+Rendering: /workspace/atlas/repro/team_mesh -> /workspace/atlas/repro/render_plain.zarr (zarr)
+ds_level=0 ds_scale=1 sA=1 Pg=1 render_scale=1
+rendering 2240x2160 at scale 1 crop [2240×2160 from (0,0)]

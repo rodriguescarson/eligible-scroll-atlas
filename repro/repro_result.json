@@ -1,0 +1,20 @@
+{
+ "render_plain.zarr": {
+  "chunks_compared": 174,
+  "identical_chunks": 0,
+  "published_missing_locally": 0,
+  "local_extra": 0,
+  "pearson_r": 0.7294,
+  "mean_abs_diff": 23.885
+ },
+ "render_flip.zarr": {
+  "chunks_compared": 174,
+  "identical_chunks": 0,
+  "published_missing_locally": 0,
+  "local_extra": 0,
+  "pearson_r": 1.0,
+  "mean_abs_diff": 0.003
+ },
+ "flip_is_layer_reversed_plain": true,
+ "flip_equals_plain": false
+}

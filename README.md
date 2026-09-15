@@ -26,3 +26,4 @@ carry its CC BY-NC 4.0 terms.
 | date | step |
 |---|---|
 | 15 Sep 2026 | gate table built (340 meshes; 327 aligned under 30 degrees; 297 of those not `reprova`); pre-registration written |
+| 15 Sep 2026 | reproduction of a team-published PHerc0800 surface volume from its mesh: `--flip-normals` matches at r = 1.0000, mean abs diff 0.003 (`repro/PHerc0800_reproduction.md`) |
