@@ -48,7 +48,7 @@ fi
 
 # 4. checkpoints from the public release
 cd $W
-uvx --from huggingface_hub hf download scrollprize/ink_9um --include 'hybrid_3d2d-seed42/step-010000.pth' 'hybrid_3d2d-seed42/step-020000.pth' 'hybrid_3d2d-seed42/step-030000.pth' 'hybrid_3d2d-seed43/step-060000.pth' --local-dir checkpoints/ink_9um > $W/log/hf_download.out 2>&1; step "hf download rc=$?"
+uvx --from huggingface_hub hf download scrollprize/ink_9um hybrid_3d2d-seed42/step-010000.pth hybrid_3d2d-seed42/step-020000.pth hybrid_3d2d-seed42/step-030000.pth hybrid_3d2d-seed43/step-060000.pth --local-dir checkpoints/ink_9um > $W/log/hf_download.out 2>&1; step "hf download rc=$? files $(ls checkpoints/ink_9um/*/*.pth | wc -l)/4"
 sha256sum checkpoints/ink_9um/*/*.pth | tee -a $LOG
 
 # 5. the seed42 10k/20k/30k weight soup (inkbench soup.py recipe, "soup_s42_early3")
