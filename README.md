@@ -8,7 +8,7 @@ ink maps, previews and per-mesh receipts are released so nobody has to render
 these scrolls again.
 
 * `prereg/PREREG.md`: the recipe, controls, screens and outcomes, committed
-  before the first render. SHA-256 at tag `prereg-v1` is recorded below.
+  before the first render. SHA-256 at tag `prereg-v1`: `1efef1423caffa73d682a85e3ed083762b3bc9dd8babe33b76cb2792760fc20d`.
 * `data/gates.csv`: the 340 meshes with area, pscamillo's eye verdict, and
   TAUIL's sheet-alignment angle (`scripts/gates.py` builds it).
 * Renders and maps: Hugging Face dataset, linked here when uploaded.
