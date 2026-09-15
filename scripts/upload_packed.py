@@ -5,7 +5,7 @@ ink-detection outputs (maps, previews, mask, infer.json) are uploaded loose with
 plant_eval.json excluded. Loops every 10 min; after infer_all/v2 writes ALL DONE and everything is verified remote, it
 stops the pod. State in /workspace/atlas/upload/uploaded.txt."""
 import glob, json, os, subprocess, sys, time
-from huggingface_hub import HfApi
+from huggingface_hub import HfApi, CommitOperationAdd
 W = "/workspace/atlas"; R = f"{W}/renders"; ST = f"{W}/upload"; os.makedirs(f"{ST}/stage", exist_ok=True)
 REPO = os.environ.get("HF_REPO", "rodriguescarson/eligible-scroll-atlas-renders")
 LOG = f"{W}/log/upload.log"; DONE = f"{ST}/uploaded.txt"
@@ -17,7 +17,19 @@ log(f"repo ready {REPO}")
 queue = [l.split() for l in open(f"{W}/render/queue.txt")]
 while True:
     done = set(open(DONE).read().split()) if os.path.exists(DONE) else set()
-    n_new = 0
+    n_new = 0; ops = []; keys = []; tars = []
+    def flush():
+        global n_new
+        if not ops: return
+        try:
+            api.create_commit(repo_id=REPO, repo_type="dataset", operations=ops, commit_message=f"renders {keys[0]} .. {keys[-1]} ({len(keys)})")
+            with open(DONE, "a") as f: f.write("".join(k + "\n" for k in keys))
+            n_new += len(keys)
+        except Exception as e:
+            log(f"FAIL commit {keys[0]}..{keys[-1]}: {str(e)[:200]}")
+        for t in tars:
+            if os.path.exists(t): os.remove(t)
+        ops.clear(); keys.clear(); tars.clear()
     for s, m, *_ in queue:
         key = f"{s}/{m}"; d = f"{R}/{s}/{m}"
         if key in done or not os.path.exists(f"{d}/render.json"): continue
@@ -25,13 +37,11 @@ while True:
         tar = f"{ST}/stage/{s}_{m}.tar"
         try:
             subprocess.run(["tar", "-cf", tar, "-C", d, "surface-volumes", "render.json"], check=True)
-            api.upload_file(path_or_fileobj=tar, path_in_repo=f"{s}/{m}/surface-volumes.tar", repo_id=REPO, repo_type="dataset",
-                            commit_message=f"render {key}")
-            open(DONE, "a").write(key + "\n"); n_new += 1
         except Exception as e:
-            log(f"FAIL {key}: {str(e)[:200]}")
-        finally:
-            if os.path.exists(tar): os.remove(tar)
+            log(f"FAIL tar {key}: {str(e)[:200]}"); continue
+        ops.append(CommitOperationAdd(path_in_repo=f"{s}/{m}/surface-volumes.tar", path_or_fileobj=tar)); keys.append(key); tars.append(tar)
+        if len(ops) >= 10 or sum(os.path.getsize(t) for t in tars) > 4e9: flush()
+    flush()
     log(f"render tars: +{n_new}, total {len(done) + n_new}")
     try:
         api.upload_large_folder(repo_id=REPO, folder_path=R, repo_type="dataset", num_workers=4,
