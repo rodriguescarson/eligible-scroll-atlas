@@ -18,9 +18,18 @@ rm -rf /tmp/bw
 
 # 1. VC3D AppImage (same release asset as the PHerc0800 reproduction) + remote cache config
 cd $W/tools
-if [ ! -f VC3D.AppImage ]; then
-  curl -sL -o VC3D.AppImage https://github.com/ScrollPrize/villa/releases/download/latest/VC3D-4b3c728-2026-09-15-linux-x86_64.AppImage && chmod +x VC3D.AppImage
+# pinned pre-registered binary. The villa "latest" release moves (it served d8feb97 by 15 Sep 17:40 UTC), so a 404 falls
+# back to the copy kept in the private HF repo; the file is accepted only if its sha256 matches.
+PIN=d9193657506a795e1048adeb2950454809fabf78cb5f9e8bcc076f6afd1fdb4a
+if [ ! -f VC3D.AppImage ] || [ "$(sha256sum VC3D.AppImage | cut -c1-64)" != "$PIN" ]; then
+  curl -sfL -o VC3D.AppImage https://github.com/ScrollPrize/villa/releases/download/latest/VC3D-4b3c728-2026-09-15-linux-x86_64.AppImage
+  if [ "$(sha256sum VC3D.AppImage 2>/dev/null | cut -c1-64)" != "$PIN" ]; then
+    HF_TOKEN=$(cat $W/.hf_token) uvx --from huggingface_hub hf download rodriguescarson/eligible-scroll-atlas-held tools/VC3D-4b3c728-2026-09-15-linux-x86_64.AppImage --repo-type dataset --local-dir $W/tools/_pin > $W/log/appimage_pin.out 2>&1
+    mv $W/tools/_pin/tools/VC3D-4b3c728-2026-09-15-linux-x86_64.AppImage VC3D.AppImage 2>/dev/null
+  fi
+  chmod +x VC3D.AppImage
 fi
+[ "$(sha256sum VC3D.AppImage | cut -c1-64)" = "$PIN" ] || { step "FATAL appimage sha mismatch"; exit 1; }
 step "appimage sha256 $(sha256sum VC3D.AppImage | cut -c1-64)"
 mkdir -p /workspace/vc3d_cfg /workspace/remote_cache
 printf '[viewer]\nremote_cache_dir=/workspace/remote_cache\n' > /workspace/vc3d_cfg/VC3D.ini
