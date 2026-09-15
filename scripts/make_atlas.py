@@ -12,7 +12,7 @@ def f(x, n=4):
 cards = []
 for r in rows:
     d = os.path.join(a.renders, r["scroll"], r["mesh"], "ink-detection"); imgs = ""
-    if r["pass"] != "True":
+    if r["pass"] != "True" and r.get("pass_v2") != "True":
         for p in sorted(glob.glob(os.path.join(d, "*-ds8.jpg"))):
             name = f"{r['scroll']}_{r['mesh']}_{os.path.basename(p)}"; dst = os.path.join(a.out, "ds8", name)
             if a.copy and not os.path.exists(dst): shutil.copy(p, dst)
@@ -21,7 +21,7 @@ for r in rows:
     else: imgs = '<p class="held">passes all four screens: images held for the Scroll Prize team (pre-registration, "Outcomes")</p>'
     cards.append(f'''<section id="{r['scroll']}_{r['mesh']}"><h2>{r['scroll']} / {r['mesh']} <small>R {f(r['R'],3)}</small></h2>
 <table><tr><th>area cm²</th><td>{r['area_cm2']}</td><th>verdict</th><td>{r['verdict'] or 'not inspected'}</td><th>aligned&lt;30°</th><td>{r['aligned_lt30']}</td><th>reprova</th><td>{r['reprova']}</td></tr>
-<tr><th>S1 fwd</th><td>{f(r['S1'])}</td><th>S1 rev</th><td>{f(r['S1_reverse'])}</td><th>S2 ratio</th><td>{f(r['S2_ratio'],3)}</td><th>pass</th><td>{r['pass']}</td></tr>
+<tr><th>S1 fwd</th><td>{f(r['S1'])}</td><th>S1 rev</th><td>{f(r['S1_reverse'])}</td><th>S2 ratio</th><td>{f(r['S2_ratio'],3)}</td><th>pass v1 / v2</th><td>{r['pass']} / {r.get('pass_v2','')}</td></tr>
 <tr><th>S3 period mm</th><td>{f(r['S3_period_mm'],2)}</td><th>S3 prominence</th><td>{f(r['S3_prominence'],2)}</td><th>S4 mass in band</th><td>{f(r['S4_mass_in_band'],3)}</td><th>valid px</th><td>{r['valid_px']}</td></tr></table>
 <div class="figs">{imgs}</div></section>''')
 n_pass = sum(1 for r in rows if r["pass"] == "True")

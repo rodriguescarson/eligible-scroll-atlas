@@ -75,7 +75,12 @@ def screens(d, um, control_s1=None, maskp=None, mask_zarr=None):
         r["S2_ratio"] = s1 / control_s1 if control_s1 > 0 else None
         r["S2_pass"] = bool(control_s1 > 0 and 0.2 <= s1 / control_s1 <= 5.0)
     r["S3"] = periodicity(hit, valid, um); r["S4"] = stroke_scale(hit, um)
-    r["pass"] = bool(s1 > 0 and r.get("S2_pass", True) and r["S3"]["pass"] and r["S4"]["pass"] and r.get("S1_fwd_minus_rev", 1) > 0)
+    # v2 (AMENDMENT-1, filed before any eligible mesh was scored): S4 evaluated on each file's own >=0.75 mask
+    r["S4_per_file"] = [stroke_scale(valid & (m >= 0.75), um) for m in ms]
+    r["S4_v2_pass"] = bool(all(x["pass"] for x in r["S4_per_file"]))
+    common = bool(s1 > 0 and r.get("S2_pass", True) and r["S3"]["pass"] and r.get("S1_fwd_minus_rev", 1) > 0)
+    r["pass"] = bool(common and r["S4"]["pass"])
+    r["pass_v2"] = bool(common and r["S4_v2_pass"])
     if control_s1 is not None and control_s1 > 0: r["R"] = s1 / control_s1
     return r
 

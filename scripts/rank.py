@@ -24,7 +24,8 @@ for side in sorted(glob.glob(os.path.join(a.renders, "*", "*", "ink-detection", 
                  "aligned_lt30": g.get("aligned_lt30", ""), "reprova": g.get("reprova", ""), "median_angle_deg": g.get("median_angle_deg", ""),
                  "valid_px": r["valid_px"], "S1": r["S1"], "S1_mean3": r["S1_mean_over_files"], "S1_reverse": r.get("S1_reverse", ""),
                  "S2_ratio": r.get("S2_ratio", ""), "S3_period_mm": r["S3"]["period_mm"], "S3_prominence": r["S3"]["prominence"],
-                 "S4_mass_in_band": r["S4"]["mass_in_band"], "S4_components": r["S4"]["components"], "pass": r["pass"], "R": r.get("R", "")})
+                 "S4_mass_in_band": r["S4"]["mass_in_band"], "S4_components": r["S4"]["components"],
+                 "S4_v2_min_mass_in_band": min(x["mass_in_band"] for x in r.get("S4_per_file", [r["S4"]])), "pass": r["pass"], "pass_v2": r.get("pass_v2", ""), "R": r.get("R", "")})
     print(key, f"S1={r['S1']:.5f} rev={r.get('S1_reverse', 0):.5f} R={r.get('R', 0):.3f} pass={r['pass']}", flush=True)
 rows.sort(key=lambda x: (-(x["R"] or 0), -(x["S1_mean3"] or 0)))
 with open(os.path.join(a.out, "ranked.csv"), "w", newline="") as f:
@@ -33,7 +34,8 @@ prim = [x for x in rows if x["aligned_lt30"] == "True" and x["reprova"] != "True
 summ = {"scored": len(rows), "control_s1": a.control_s1,
         "primary_denominator_scored": len(prim), "primary_pass": sum(x["pass"] for x in prim),
         "secondary_denominator_scored": len(sec), "secondary_pass": sum(x["pass"] for x in sec), "all_pass": sum(x["pass"] for x in rows),
+        "primary_pass_v2": sum(1 for x in prim if x["pass_v2"] is True), "secondary_pass_v2": sum(1 for x in sec if x["pass_v2"] is True), "all_pass_v2": sum(1 for x in rows if x["pass_v2"] is True),
         "reverse_gt_forward": sum(1 for x in rows if x["S1_reverse"] != "" and x["S1_reverse"] > x["S1"]),
-        "passing_meshes": [f"{x['scroll']}/{x['mesh']}" for x in rows if x["pass"]],
+        "passing_meshes": [f"{x['scroll']}/{x['mesh']}" for x in rows if x["pass"]], "passing_meshes_v2": [f"{x['scroll']}/{x['mesh']}" for x in rows if x["pass_v2"] is True],
         "top10_by_R": [(f"{x['scroll']}/{x['mesh']}", x["R"]) for x in rows[:10]]}
 json.dump(summ, open(os.path.join(a.out, "summary.json"), "w"), indent=1); print(json.dumps(summ, indent=1))
