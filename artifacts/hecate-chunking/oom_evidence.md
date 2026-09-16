@@ -34,6 +34,39 @@ are read in Z; the accumulators are float32 memmaps in a temp directory; normali
 the GPU every batch; the PNG is streamed and the Zarr written in chunks. Output is never held whole in memory. The design is
 already bounded. We opted out of its default and paid for it.
 
+## Measured, on an unmodified hecate.py (16 Sep 2026)
+
+Peak GPU memory of the released tool on one A40, torch 2.8.0+cu128, three synthetic canvases spanning the range seen in the
+September pass, float32. Raw data in `memsweep.json`, harness in `held-scripts` as the sweep runner.
+
+| Canvas | batch 64 | batch 32 | batch 16 | batch 8 |
+|---|---|---|---|---|
+| 2.5 Mpx | 20.63 | 10.62 | 5.60 | 3.10 |
+| 11.5 Mpx | 20.63 | 10.62 | 5.60 | 3.10 |
+| 29.8 Mpx | 20.63 | 10.62 | 5.60 | 3.10 |
+
+Peak reserved GiB; peak allocated tracks it at 15.15, 7.82, 4.16 and 2.32. Wall time is the only thing that scales with canvas:
+53 s, 240 s and 623 s at batch 64.
+
+The same grid in bf16, also identical at every canvas size:
+
+| Precision | batch 64 | batch 32 | batch 16 | batch 8 |
+|---|---|---|---|---|
+| fp32 | 20.63 | 10.62 | 5.60 | 3.10 |
+| bf16 | 14.63 | 7.62 | 4.10 | 2.35 |
+
+bf16 takes 29 percent off peak reserved memory, not the half a full-precision switch would give, which matches the model's
+finding that the two largest decoder operations, the trilinear upsample and the group norm, stay in float32 under autocast. It is
+also 40 percent faster on the largest canvas: 377 s against 623 s at batch 64.
+
+**Peak memory is identical across a twelvefold change in canvas area and halves exactly with batch size.** That is the
+prediction from the line-by-line model, confirmed: nothing on the GPU scales with the canvas, so tiling it cannot save a byte.
+
+**What would have prevented all 23 failures.** Two concurrent jobs need twice the reserved figure plus context. At batch 64 that
+is 41.3 GiB against 44.43 GiB of card, with no headroom for the second process's fragmentation, which is exactly the collision we
+hit. At batch 32 it is 21.2 GiB, at batch 16 it is 11.2 GiB. Any of those would have run two jobs comfortably, at a cost of 1 to
+7 percent in wall time: on the largest canvas, 623 s at batch 64 against 641 s at 32 and 649 s at 16.
+
 ## What is genuinely improvable, and what it would take to claim it
 
 Three tensors stay alive long after their last use: the conv1 output, the `feats` list, and above all the encoder pyramid bound
