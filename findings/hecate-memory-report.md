@@ -3,7 +3,8 @@
 Measured while running the released 9.6 um model over the 340 published meshes of the eight prize-eligible scrolls,
 September 2026. Raw data and harness in `artifacts/hecate-chunking/`.
 
-about precision. Neither needs a code change to be useful, and the second may be worth a line in the README.
+Three findings: one operational, one about precision, and one null. None of them asks you to change the code. The second
+may be worth a line in the README, and the third is reported because we pre-registered it and it came out negative.
 
 ## 1. Peak GPU memory is flat in canvas size and linear in batch
 
