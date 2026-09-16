@@ -1,0 +1,21 @@
+hecate meshes: 335
+screens files: 340
+ink meshes: 340
+joined: 335
+
+Spearman correlations over 335 meshes:
+  hecate fwd>=0.75      vs ink S1            0.222
+  hecate fwd>=0.75      vs ink S1 fwd-rev    0.080
+  hecate log fwd/rev    vs ink S1 fwd-rev    0.431
+  top 10  sets overlap  5 of 10 (expected 0.3 by chance)
+  top 20  sets overlap  8 of 20 (expected 1.2 by chance)
+  top 50  sets overlap 17 of 50 (expected 7.5 by chance)
+
+ink-rule passers among joined meshes: 5
+   PHerc0358/z11280_w020      hecate rank   3/335  fwd 0.0495 rev 0.0090 | ink S1 0.0264 rev 0.0043
+   PHerc0813/z12496_w060      hecate rank   2/335  fwd 0.0674 rev 0.0126 | ink S1 0.0405 rev 0.0035
+   PHerc0813/z13088_w040      hecate rank   1/335  fwd 0.0774 rev 0.0066 | ink S1 0.0344 rev 0.0031
+   PHerc0813/z5888_w020       hecate rank  14/335  fwd 0.0216 rev 0.0138 | ink S1 0.0268 rev 0.0223
+   PHerc0813/z7696_w020       hecate rank   7/335  fwd 0.0376 rev 0.0466 | ink S1 0.0202 rev 0.0080
+
+mean hecate fwd>=0.75: ink-pass 0.0507 (n 5) vs ink-fail 0.0063 (n 330)

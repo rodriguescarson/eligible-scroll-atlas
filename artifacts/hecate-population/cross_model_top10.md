@@ -136,3 +136,23 @@ and are not used anywhere. The w081 figure alone, at the top of the entire popul
 
 The gap stays open: only w042 and w043 can be placed in the Hecate distribution. Control runs must archive the render alongside
 the maps, which costs about a gigabyte per control and is the cheapest fix available.
+
+## Final population, 335 of 340 meshes (16 Sep 12:10 UTC)
+
+Everything above describes the 256-mesh state while the pass was still running. The completed figures:
+
+| Measure | Value |
+|---|---|
+| Meshes with both maps | 335 of 340 |
+| Forward >= 0.75 | median 0.0049, p90 0.0148, p99 0.0463, max 0.0774 |
+| Forward at or above reverse | 126 of 335 |
+| Rank correlation, level | 0.222 |
+| Rank correlation, forward-over-reverse | 0.431 |
+| Top-10 / 20 / 50 overlap | 5 of 10 (P = 1.7e-06), 8 of 20 (P = 2.9e-06), 17 of 50 (P = 1.8e-04) |
+
+The five ink-rule passers rank 1, 2, 3, 7 and 14; four are in the top 10, P = 2.0e-06. Six of Hecate's top 10 are rejected by the
+ink rule. Two passers, z7696_w020 at rank 7 (forward 0.0376, reverse 0.0466) and z5888_w020 at rank 14 (0.0216, 0.0138), have
+reverse at or above forward in Hecate, so agreement is weaker than the 256-mesh snapshot suggested.
+
+Missing: PHerc0813 z7104_w020 through w100, recovered on the pod after an out-of-memory failure but not copied off before it
+removed itself. Their maps are in the dataset; their statistics are not here. Joined table: `cross_model_join_final.json`.
