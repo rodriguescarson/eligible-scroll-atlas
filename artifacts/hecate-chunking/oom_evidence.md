@@ -1,37 +1,47 @@
-# Out-of-memory evidence from the September Hecate pass (16 Sep 2026)
+# The Hecate out-of-memory failures were our own misconfiguration (16 Sep 2026)
 
-Mined from the per-mesh inference logs on the three pods that ran the 9.6 micron pass, before the last pod removed itself.
-Raw data: `mem_evidence.json` (305 log entries over 153 meshes), `stats_pod6_snapshot.jsonl`.
+Supersedes the earlier version of this file, which framed these failures as a missing capability and proposed bounded-memory
+tiling. A line-by-line memory model of `hecate.py` says that framing was wrong.
 
-## What happened
+## What actually happened
 
-23 meshes failed with `torch.OutOfMemoryError` across three A40 pods (44.43 GiB each) running two `hecate.py` processes at
-`--batch-size 64`. All 23 were rerun alone afterwards and every one succeeded, so nothing was lost; the cost was operator
-attention and about 40 minutes of pod time.
+23 meshes failed with `torch.OutOfMemoryError` across three A40 pods running **two** inference processes each at
+`--batch-size 64`. The tool's own default is `--batch-size 1` (line 411). All 23 recovered when rerun alone. Every failure was a
+co-tenancy collision produced by our launch settings, not by any mesh being too large.
 
-## What the logs show
+## Why tiling the canvas would have saved nothing
 
-- In all 10 log entries carrying the message, the failure is the same shape: the *other* process on the card held **34.21 GiB**,
-  and the failing process died asking for 0.9 to 2.9 GiB more than remained, at
-  `x = torch.cat([x, feats[0]], dim=1)` in `forward_features`.
-- The failing process itself was small at that moment: 5.09 to 5.56 GiB allocated by PyTorch, plus 2.78 to 3.48 GiB reserved but
-  unallocated.
-- The meshes that failed were **not** the large ones: their canvases were 4.5, 9.5, 15.6, 20.0 and 21.5 megapixels, while the
-  largest canvas in the whole pass, 29.8 megapixels, completed normally.
-- Canvas sizes across the pass: minimum 2.5, median 11.5, maximum 29.8 megapixels; patch counts up to 28,762 per run.
+Every GPU allocation in this tool scales with **batch**, not with canvas size:
 
-## What this does and does not establish
+| Term | Scales with | Cost |
+|---|---|---|
+| The failing `torch.cat` at line 179 | batch | exactly 48.0 MiB per patch, fp32 |
+| Decoder block 2 working set, the global peak | batch | 112 MiB per patch |
+| Encoder pyramid, pinned but dead after line 165 | batch | 85 MiB per patch |
+| Model parameters and buffers | nothing | 498.1 MiB, constant |
+| Output accumulator, weight map, PNG and Zarr | canvas | disk-backed memmaps, zero GPU bytes |
 
-It establishes that a single Hecate run can reach 34.21 GiB on an A40, and that two such runs do not fit on one card, so
-concurrency is what produced every failure here.
+The logged 2.30 GiB request divided by 48.0 MiB gives an effective batch of 49, which is the arithmetic confirming batch as the
+driver. At 2380 x 12240 the canvas-sized arrays are 116.5 MiB each on disk, not on the card.
 
-It does **not** establish that peak memory scales with canvas area, because the tool logs memory only when it fails: there is no
-per-run peak for the successful runs, including the 29.8 megapixel one. Any claim about the scaling has to be measured
-deliberately, by instrumenting `torch.cuda.max_memory_allocated` across a range of canvas sizes, before it is stated.
+The measured receptive field is 405 pixels in Y and X, so canvas tiles would need a 405 pixel halo to stay equivalent. Tiling
+would add overlap work and seam risk to buy memory that was never allocated on the GPU in the first place.
 
-## Why this is worth fixing rather than working around
+## What the tool already does well, and is worth saying out loud
 
-The workaround used here was to rerun failures one at a time, which works but halves throughput on a card that can otherwise hold
-two jobs. A bounded-memory path would let one A40 run two jobs reliably, and would let the model run at all on the 24 GiB cards
-most people have. Whether that is achievable, and at what cost in runtime or output fidelity, is being measured rather than
-assumed; the acceptance test is that a tiled map reproduces the whole-canvas map within a stated tolerance.
+Inference runs under `inference_mode` with gradients disabled; patches are XY-tiled with Hann blending; only the central planes
+are read in Z; the accumulators are float32 memmaps in a temp directory; normalization runs in 128 x 256 blocks; results leave
+the GPU every batch; the PNG is streamed and the Zarr written in chunks. Output is never held whole in memory. The design is
+already bounded. We opted out of its default and paid for it.
+
+## What is genuinely improvable, and what it would take to claim it
+
+Three tensors stay alive long after their last use: the conv1 output, the `feats` list, and above all the encoder pyramid bound
+as `feat_maps`, which is 85 MiB per patch and about 39 percent of peak. Releasing them is arithmetic-free and should be
+bit-identical. Separately, `--precision bf16` does not halve the decoder, because the trilinear upsample and group norm carry
+fp32 autocast policies, so the largest tensors stay fp32 in both precision modes. That is worth reporting to the team on its own.
+
+Neither claim is made here yet. The order is: instrument peak reserved and allocated memory, measure the unmodified tool at
+batch 64, 32, 16 and 8 across canvases spanning 2.5 to 29.8 megapixels, and only then decide whether the dead-tensor release
+moves peak **reserved** memory, which is the number that starves a neighbouring process. Peak live memory falling does not
+guarantee reserved memory follows.
