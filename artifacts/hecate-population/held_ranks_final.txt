@@ -1,13 +1,13 @@
-meshes scored: 335
+meshes scored: 340
 
 held ink-screen passers in the Hecate forward >=0.75 ranking:
-  PHerc0813/z13088_w040      rank   1 of 335 (top 0.3%)  fwd 0.0774  rev 0.0066  ratio  11.5  
-  PHerc0813/z12496_w060      rank   2 of 335 (top 0.6%)  fwd 0.0674  rev 0.0126  ratio   5.3  TAUIL's known false positive
-  PHerc0813/z7696_w020       rank   7 of 335 (top 2.1%)  fwd 0.0376  rev 0.0466  ratio   0.8  
-  PHerc0813/z5888_w020       rank  14 of 335 (top 4.2%)  fwd 0.0216  rev 0.0138  ratio   1.6  
-  PHerc0358/z11280_w020      rank   3 of 335 (top 0.9%)  fwd 0.0495  rev 0.0090  ratio   5.5  
+  PHerc0813/z13088_w040      rank   1 of 340 (top 0.3%)  fwd 0.0774  rev 0.0066  ratio  11.5  
+  PHerc0813/z12496_w060      rank   2 of 340 (top 0.6%)  fwd 0.0674  rev 0.0126  ratio   5.3  TAUIL's known false positive
+  PHerc0813/z7696_w020       rank   7 of 340 (top 2.1%)  fwd 0.0376  rev 0.0466  ratio   0.8  
+  PHerc0813/z5888_w020       rank  14 of 340 (top 4.1%)  fwd 0.0216  rev 0.0138  ratio   1.6  
+  PHerc0358/z11280_w020      rank   3 of 340 (top 0.9%)  fwd 0.0495  rev 0.0090  ratio   5.5  
 
-  4 of 5 scored held meshes are in the top 10 of 335; probability if ranks were random: 2e-06
+  4 of 5 scored held meshes are in the top 10 of 340; probability if ranks were random: 1.9e-06
 
 per scroll (forward >=0.75):
   PHerc0125  n  62  median 0.0023  max 0.0086  in top 10: 0
@@ -16,5 +16,5 @@ per scroll (forward >=0.75):
   PHerc0268  n   6  median 0.0009  max 0.0022  in top 10: 0
   PHerc0358  n   3  median 0.0096  max 0.0495  in top 10: 1
   PHerc0800  n  95  median 0.0060  max 0.0257  in top 10: 1
-  PHerc0813  n  70  median 0.0069  max 0.0774  in top 10: 5
+  PHerc0813  n  75  median 0.0069  max 0.0774  in top 10: 5
   PHerc0826  n   3  median 0.0059  max 0.0061  in top 10: 0

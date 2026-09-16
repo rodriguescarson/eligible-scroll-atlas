@@ -156,3 +156,20 @@ reverse at or above forward in Hecate, so agreement is weaker than the 256-mesh 
 
 Missing: PHerc0813 z7104_w020 through w100, recovered on the pod after an out-of-memory failure but not copied off before it
 removed itself. Their maps are in the dataset; their statistics are not here. Joined table: `cross_model_join_final.json`.
+
+## Complete population, 340 of 340 (16 Sep, after recovering the last five meshes)
+
+The five PHerc0813 z7104 meshes that pod 6 rescued after an out-of-memory failure were retrieved from the dataset once a token
+was available again, so the table is now complete. All five sit low (forward 0.0023 to 0.0084) and four have reverse above
+forward, so no rank changed.
+
+| Measure | Value at 340 |
+|---|---|
+| Forward >= 0.75 | median 0.0049, p90 0.0148, p99 0.0463, max 0.0774 |
+| Forward at or above reverse | 127 of 340 |
+| Rank correlation, level | 0.221 |
+| Rank correlation, forward-over-reverse | 0.440 |
+| Top-10 / 20 / 50 overlap | 5 (P = 1.6e-06), 8 (P = 2.6e-06), 17 (P = 1.4e-04) against 0.3, 1.2 and 7.4 expected |
+
+Ink-rule passers rank 1, 2, 3, 7 and 14; four in the top 10 at P = 1.9e-06; six of Hecate's top 10 are rejected by the ink rule.
+Joined table: `cross_model_join_final.json`.
