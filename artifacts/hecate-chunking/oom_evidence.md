@@ -67,14 +67,36 @@ is 41.3 GiB against 44.43 GiB of card, with no headroom for the second process's
 hit. At batch 32 it is 21.2 GiB, at batch 16 it is 11.2 GiB. Any of those would have run two jobs comfortably, at a cost of 1 to
 7 percent in wall time: on the largest canvas, 623 s at batch 64 against 641 s at 32 and 649 s at 16.
 
-## What is genuinely improvable, and what it would take to claim it
+## The dead-tensor release: pre-registered, tested, dropped
 
 Three tensors stay alive long after their last use: the conv1 output, the `feats` list, and above all the encoder pyramid bound
-as `feat_maps`, which is 85 MiB per patch and about 39 percent of peak. Releasing them is arithmetic-free and should be
-bit-identical. Separately, `--precision bf16` does not halve the decoder, because the trilinear upsample and group norm carry
-fp32 autocast policies, so the largest tensors stay fp32 in both precision modes. That is worth reporting to the team on its own.
+as `feat_maps`, which is 85 MiB per patch and about 39 percent of peak. Releasing them is arithmetic-free. Before touching the
+code we fixed the bar: byte-identical output PNGs as the acceptance test, and peak **reserved** memory as the metric, because
+peak live memory falling does not guarantee reserved memory follows. Written down in advance: if reserved does not move, the
+patch is dropped and the null is what gets reported.
 
-Neither claim is made here yet. The order is: instrument peak reserved and allocated memory, measure the unmodified tool at
-batch 64, 32, 16 and 8 across canvases spanning 2.5 to 29.8 megapixels, and only then decide whether the dead-tensor release
-moves peak **reserved** memory, which is the number that starves a neighbouring process. Peak live memory falling does not
-guarantee reserved memory follows.
+Reserved did not move. Not by a byte, in any configuration.
+
+| precision / batch | allocated, base → patched | reserved, base → patched |
+|---|---|---|
+| fp32, 64 | 15.15 → 13.53 | 20.63 → 20.63 |
+| bf16, 64 | 12.00 → 8.01 | 14.70 → 14.70 |
+| fp32, 16 | 4.16 → 3.75 | 5.60 → 5.60 |
+| bf16, 16 | 3.37 → 2.37 | 4.12 → 4.12 |
+
+GiB, one A40, torch 2.8.0+cu128, twelve baseline/patched pairs: the four configurations above crossed with the same three
+canvases. Every pair produced a sha256-identical image, every pair reproduced the row exactly regardless of canvas, and wall
+time moved by at most 1.5 s on runs of 32 to 650 seconds.
+
+Releasing the tensors cuts live allocation by up to 33 percent and buys a neighbouring process exactly nothing, because the
+caching allocator keeps the freed blocks in its own pool instead of returning them to the driver. **The patch is dropped.** The
+trap it illustrates is worth more than the patch would have been: profile Hecate with `max_memory_allocated`, the number most
+people quote, and this change looks like a third of the card; measure `max_memory_reserved`, the number that decides whether two
+jobs fit, and it is identically zero.
+
+Separately, `--precision bf16` does not halve the decoder, because the trilinear upsample and group norm carry fp32 autocast
+policies, so the largest tensors stay fp32 in both precision modes. That one is a real finding and goes to the team.
+
+So both questions this file was opened to settle came back against the interesting answer. Canvas tiling saves nothing because
+nothing on the GPU scales with the canvas, and the dead-tensor release saves nothing a co-tenant can use. The only lever that
+moved peak reserved memory is the batch size, and it was ours to set all along.

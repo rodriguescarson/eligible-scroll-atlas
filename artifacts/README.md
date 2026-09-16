@@ -6,6 +6,9 @@ JSON only. Every figure in the September writeup is computed from a file here by
   their denominators.
 - `hecate-population/` — the Hecate 9.6 um pass joined to those screens: per-mesh statistics (`all.jsonl`, the per-pod files),
   the joined table (`cross_model_join.json`) and the cross-model writeup.
+- `hecate-chunking/patchtest/` — the pre-registered dead-tensor-release test: the change as a diff, the harness, and
+  `equivalence.out`, one row per baseline/patched pair. Twelve pairs, every output sha256-identical, peak reserved memory
+  unchanged to the byte in all twelve while peak allocated fell up to 33 percent. The patch is dropped; the null is the result.
 - `fit-0826/`, `fit-0191/` — spiral-fit outputs: per-winding areas, the comparison against pscamillo's published meshes, the
   overlapping-window consistency test, winding spacing profiles, the radial sheet-spacing checks and the winding-count A/B.
 
