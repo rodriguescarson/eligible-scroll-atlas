@@ -1,0 +1,772 @@
+{
+ "z0": 12000,
+ "umbilicus_xy": [
+  4422.466666666666,
+  4351.0
+ ],
+ "rays": {
+  "15": {
+   "n_our_windings": 29,
+   "our_radii": {
+    "w014": 215.6,
+    "w015": 244.6,
+    "w017": 280.5,
+    "w018": 288.7,
+    "w020": 301.9,
+    "w021": 317.6,
+    "w022": 356.2,
+    "w023": 375.7,
+    "w024": 387.5,
+    "w025": 392.7,
+    "w026": 398.9,
+    "w027": 426.4,
+    "w028": 457.3,
+    "w029": 461.8,
+    "w030": 463.6,
+    "w031": 466.4,
+    "w032": 467.3,
+    "w033": 476.0,
+    "w034": 486.2,
+    "w035": 495.6,
+    "w036": 501.8,
+    "w037": 506.7,
+    "w038": 512.5,
+    "w039": 519.0,
+    "w040": 524.9,
+    "w041": 529.8,
+    "w042": 537.4,
+    "w043": 573.1,
+    "w044": 583.7
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 426.4,
+     "our_n": 11,
+     "our_pitch": 5.7,
+     "scan_peaks_n": 7,
+     "scan_peak_pitch": 15.0,
+     "scan_autocorr_period": 27,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 20,
+   "scan_peaks_span_k2": 14,
+   "scan_peaks_span_k3": 13,
+   "span_autocorr_period": 27,
+   "sheet_count_from_period": 13.6
+  },
+  "45": {
+   "n_our_windings": 29,
+   "our_radii": {
+    "w010": 91.3,
+    "w014": 140.0,
+    "w016": 204.7,
+    "w017": 229.1,
+    "w019": 273.2,
+    "w020": 289.1,
+    "w021": 301.6,
+    "w022": 309.5,
+    "w023": 316.1,
+    "w025": 345.1,
+    "w026": 373.7,
+    "w027": 397.2,
+    "w028": 410.6,
+    "w029": 425.9,
+    "w030": 453.2,
+    "w031": 472.4,
+    "w032": 486.5,
+    "w033": 494.3,
+    "w034": 499.7,
+    "w035": 504.0,
+    "w036": 512.1,
+    "w037": 519.5,
+    "w038": 547.2,
+    "w039": 579.6,
+    "w040": 601.5,
+    "w041": 611.6,
+    "w042": 619.2,
+    "w043": 624.6,
+    "w044": 630.6
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 397.2,
+     "our_n": 6,
+     "our_pitch": 23.5,
+     "scan_peaks_n": 4,
+     "scan_peak_pitch": 14.0,
+     "scan_autocorr_period": null,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 26,
+   "scan_peaks_span_k2": 18,
+   "scan_peaks_span_k3": 15,
+   "span_autocorr_period": 27,
+   "sheet_count_from_period": 20.0
+  },
+  "75": {
+   "n_our_windings": 25,
+   "our_radii": {
+    "w017": 198.3,
+    "w019": 283.1,
+    "w022": 347.8,
+    "w023": 364.9,
+    "w024": 380.2,
+    "w025": 412.6,
+    "w026": 440.9,
+    "w027": 462.0,
+    "w028": 473.9,
+    "w029": 483.2,
+    "w030": 509.2,
+    "w031": 527.1,
+    "w032": 544.4,
+    "w033": 559.2,
+    "w034": 570.1,
+    "w035": 575.6,
+    "w036": 582.7,
+    "w037": 601.5,
+    "w038": 671.1,
+    "w039": 686.6,
+    "w040": 702.7,
+    "w041": 746.4,
+    "w042": 769.3,
+    "w043": 791.7,
+    "w044": 809.5
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 462.0,
+     "our_n": 6,
+     "our_pitch": 21.1,
+     "scan_peaks_n": 5,
+     "scan_peak_pitch": 26.5,
+     "scan_autocorr_period": 26,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 27,
+   "scan_peaks_span_k2": 18,
+   "scan_peaks_span_k3": 15,
+   "span_autocorr_period": 40,
+   "sheet_count_from_period": 15.3
+  },
+  "105": {
+   "n_our_windings": 25,
+   "our_radii": {
+    "w013": 99.6,
+    "w019": 300.9,
+    "w022": 362.2,
+    "w023": 369.4,
+    "w024": 378.4,
+    "w025": 402.4,
+    "w026": 422.7,
+    "w027": 451.8,
+    "w028": 465.5,
+    "w029": 475.8,
+    "w030": 488.1,
+    "w031": 498.4,
+    "w032": 507.9,
+    "w033": 512.0,
+    "w034": 518.3,
+    "w035": 531.0,
+    "w036": 543.1,
+    "w037": 563.6,
+    "w038": 590.9,
+    "w039": 602.6,
+    "w040": 609.6,
+    "w041": 617.9,
+    "w042": 620.2,
+    "w043": 621.9,
+    "w044": 628.3
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 451.8,
+     "our_n": 8,
+     "our_pitch": 12.3,
+     "scan_peaks_n": 7,
+     "scan_peak_pitch": 16.5,
+     "scan_autocorr_period": null,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 25,
+   "scan_peaks_span_k2": 19,
+   "scan_peaks_span_k3": 16,
+   "span_autocorr_period": 17,
+   "sheet_count_from_period": 31.1
+  },
+  "135": {
+   "n_our_windings": 24,
+   "our_radii": {
+    "w006": 56.4,
+    "w012": 121.4,
+    "w017": 227.3,
+    "w024": 394.9,
+    "w025": 411.3,
+    "w026": 424.7,
+    "w027": 440.5,
+    "w028": 457.9,
+    "w029": 477.5,
+    "w030": 494.3,
+    "w031": 507.3,
+    "w032": 513.6,
+    "w033": 517.7,
+    "w034": 522.2,
+    "w035": 529.2,
+    "w036": 537.4,
+    "w037": 544.8,
+    "w038": 561.6,
+    "w039": 576.0,
+    "w040": 584.0,
+    "w041": 589.6,
+    "w042": 592.7,
+    "w043": 596.7,
+    "w044": 602.4
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 440.5,
+     "our_n": 7,
+     "our_pitch": 16.6,
+     "scan_peaks_n": 8,
+     "scan_peak_pitch": 17.0,
+     "scan_autocorr_period": 25,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 26,
+   "scan_peaks_span_k2": 20,
+   "scan_peaks_span_k3": 16,
+   "span_autocorr_period": 32,
+   "sheet_count_from_period": 17.1
+  },
+  "165": {
+   "n_our_windings": 28,
+   "our_radii": {
+    "w009": 89.4,
+    "w013": 113.5,
+    "w014": 136.8,
+    "w015": 203.6,
+    "w016": 245.9,
+    "w020": 398.4,
+    "w021": 409.8,
+    "w022": 420.2,
+    "w023": 425.5,
+    "w025": 435.7,
+    "w027": 448.6,
+    "w028": 468.4,
+    "w029": 492.5,
+    "w030": 531.5,
+    "w031": 558.8,
+    "w032": 584.3,
+    "w033": 597.8,
+    "w034": 604.8,
+    "w035": 634.1,
+    "w036": 654.4,
+    "w037": 734.5,
+    "w038": 750.1,
+    "w039": 756.3,
+    "w040": 761.7,
+    "w041": 766.5,
+    "w042": 773.8,
+    "w043": 790.2,
+    "w044": 808.0
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 448.6,
+     "our_n": 8,
+     "our_pitch": 11.4,
+     "scan_peaks_n": 6,
+     "scan_peak_pitch": 16.0,
+     "scan_autocorr_period": null,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 28,
+   "scan_peaks_span_k2": 23,
+   "scan_peaks_span_k3": 13,
+   "span_autocorr_period": 34,
+   "sheet_count_from_period": 21.1
+  },
+  "195": {
+   "n_our_windings": 27,
+   "our_radii": {
+    "w018": 399.3,
+    "w019": 437.0,
+    "w020": 472.2,
+    "w021": 478.6,
+    "w022": 489.3,
+    "w023": 510.0,
+    "w024": 530.7,
+    "w025": 549.0,
+    "w026": 565.2,
+    "w027": 597.5,
+    "w028": 615.7,
+    "w029": 622.8,
+    "w030": 628.6,
+    "w031": 637.9,
+    "w032": 644.0,
+    "w033": 648.4,
+    "w034": 649.8,
+    "w035": 657.3,
+    "w036": 663.1,
+    "w037": 668.5,
+    "w038": 675.5,
+    "w039": 680.5,
+    "w040": 685.9,
+    "w041": 708.6,
+    "w042": 770.9,
+    "w043": 790.3,
+    "w044": 801.1
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 597.5,
+     "our_n": 10,
+     "our_pitch": 7.1,
+     "scan_peaks_n": 7,
+     "scan_peak_pitch": 12.5,
+     "scan_autocorr_period": 40,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 19,
+   "scan_peaks_span_k2": 13,
+   "scan_peaks_span_k3": 9,
+   "span_autocorr_period": 28,
+   "sheet_count_from_period": 14.4
+  },
+  "225": {
+   "n_our_windings": 26,
+   "our_radii": {
+    "w018": 286.4,
+    "w020": 431.5,
+    "w021": 466.2,
+    "w022": 518.5,
+    "w023": 535.3,
+    "w024": 546.3,
+    "w025": 580.3,
+    "w026": 619.5,
+    "w027": 655.5,
+    "w028": 679.8,
+    "w029": 700.3,
+    "w030": 717.4,
+    "w031": 736.2,
+    "w032": 777.5,
+    "w033": 835.9,
+    "w034": 873.5,
+    "w035": 900.2,
+    "w036": 919.2,
+    "w037": 935.1,
+    "w038": 948.0,
+    "w039": 953.2,
+    "w040": 961.6,
+    "w041": 971.3,
+    "w042": 981.3,
+    "w043": 995.7,
+    "w044": 1008.9
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 655.5,
+     "our_n": 4,
+     "our_pitch": 24.3,
+     "scan_peaks_n": 5,
+     "scan_peak_pitch": 23.5,
+     "scan_autocorr_period": 25,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 31,
+   "scan_peaks_span_k2": 20,
+   "scan_peaks_span_k3": 17,
+   "span_autocorr_period": 26,
+   "sheet_count_from_period": 27.8
+  },
+  "255": {
+   "n_our_windings": 25,
+   "our_radii": {
+    "w011": 56.8,
+    "w016": 154.7,
+    "w017": 232.4,
+    "w018": 263.4,
+    "w021": 321.8,
+    "w022": 330.9,
+    "w025": 358.6,
+    "w026": 367.7,
+    "w027": 379.2,
+    "w028": 392.8,
+    "w029": 400.6,
+    "w030": 406.9,
+    "w031": 414.0,
+    "w032": 423.8,
+    "w033": 434.5,
+    "w034": 446.8,
+    "w035": 457.0,
+    "w036": 474.1,
+    "w038": 504.9,
+    "w039": 522.4,
+    "w040": 537.8,
+    "w041": 552.1,
+    "w042": 565.5,
+    "w043": 578.9,
+    "w044": 595.1
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 379.2,
+     "our_n": 11,
+     "our_pitch": 9.5,
+     "scan_peaks_n": 10,
+     "scan_peak_pitch": 11.0,
+     "scan_autocorr_period": 22,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 30,
+   "scan_peaks_span_k2": 22,
+   "scan_peaks_span_k3": 19,
+   "span_autocorr_period": 25,
+   "sheet_count_from_period": 21.6
+  },
+  "285": {
+   "n_our_windings": 22,
+   "our_radii": {
+    "w008": 85.1,
+    "w009": 106.8,
+    "w010": 97.8,
+    "w018": 251.6,
+    "w026": 325.4,
+    "w027": 329.5,
+    "w028": 335.0,
+    "w029": 343.2,
+    "w031": 355.5,
+    "w032": 366.3,
+    "w033": 378.2,
+    "w034": 385.7,
+    "w035": 394.5,
+    "w036": 401.0,
+    "w037": 410.1,
+    "w038": 421.7,
+    "w039": 433.9,
+    "w040": 449.5,
+    "w041": 457.6,
+    "w042": 465.9,
+    "w043": 472.8,
+    "w044": 479.3
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 329.5,
+     "our_n": 8,
+     "our_pitch": 8.2,
+     "scan_peaks_n": 7,
+     "scan_peak_pitch": 11.5,
+     "scan_autocorr_period": 38,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 23,
+   "scan_peaks_span_k2": 18,
+   "scan_peaks_span_k3": 15,
+   "span_autocorr_period": 37,
+   "sheet_count_from_period": 10.6
+  },
+  "315": {
+   "n_our_windings": 27,
+   "our_radii": {
+    "w015": 234.6,
+    "w017": 257.7,
+    "w020": 299.0,
+    "w021": 306.2,
+    "w022": 318.0,
+    "w023": 329.1,
+    "w024": 330.9,
+    "w025": 336.0,
+    "w026": 340.6,
+    "w027": 345.7,
+    "w028": 357.7,
+    "w029": 365.4,
+    "w030": 368.7,
+    "w031": 372.8,
+    "w032": 379.2,
+    "w033": 388.0,
+    "w034": 397.9,
+    "w035": 407.0,
+    "w036": 417.6,
+    "w037": 427.7,
+    "w038": 439.0,
+    "w039": 458.9,
+    "w040": 488.6,
+    "w041": 523.1,
+    "w042": 570.5,
+    "w043": 599.3,
+    "w044": 614.3
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 345.7,
+     "our_n": 15,
+     "our_pitch": 6.8,
+     "scan_peaks_n": 7,
+     "scan_peak_pitch": 22.0,
+     "scan_autocorr_period": 24,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 23,
+   "scan_peaks_span_k2": 16,
+   "scan_peaks_span_k3": 12,
+   "span_autocorr_period": 32,
+   "sheet_count_from_period": 11.9
+  },
+  "345": {
+   "n_our_windings": 26,
+   "our_radii": {
+    "w014": 293.5,
+    "w016": 331.0,
+    "w017": 342.5,
+    "w018": 351.7,
+    "w021": 376.2,
+    "w022": 381.4,
+    "w024": 392.0,
+    "w026": 414.6,
+    "w027": 422.3,
+    "w028": 436.4,
+    "w029": 442.8,
+    "w030": 446.5,
+    "w031": 449.1,
+    "w032": 452.2,
+    "w033": 458.8,
+    "w034": 465.6,
+    "w035": 478.9,
+    "w036": 491.1,
+    "w037": 506.5,
+    "w038": 515.8,
+    "w039": 526.9,
+    "w040": 534.1,
+    "w041": 544.2,
+    "w042": 557.2,
+    "w043": 568.9,
+    "w044": 579.2
+   },
+   "ref_radii": {},
+   "bands": {
+    "w027": {
+     "r": 422.3,
+     "our_n": 13,
+     "our_pitch": 6.7,
+     "scan_peaks_n": 7,
+     "scan_peak_pitch": 16.0,
+     "scan_autocorr_period": 23,
+     "valid_share": 1.0
+    }
+   },
+   "scan_peaks_between_inner_and_outer_winding": 17,
+   "scan_peaks_span_k2": 15,
+   "scan_peaks_span_k3": 11,
+   "span_autocorr_period": 23,
+   "sheet_count_from_period": 12.4
+  }
+ },
+ "summary": {
+  "w027": {
+   "rays": 12,
+   "our_pitch_median": 10.45,
+   "our_n_median": 8.0,
+   "scan_peak_pitch_median": 16.0,
+   "scan_peaks_n_median": 7.0,
+   "scan_autocorr_median": 25.0
+  },
+  "w051": {
+   "rays": 0,
+   "our_pitch_median": null,
+   "our_n_median": null,
+   "scan_peak_pitch_median": null,
+   "scan_peaks_n_median": null,
+   "scan_autocorr_median": null
+  },
+  "w073": {
+   "rays": 0,
+   "our_pitch_median": null,
+   "our_n_median": null,
+   "scan_peak_pitch_median": null,
+   "scan_peaks_n_median": null,
+   "scan_autocorr_median": null
+  },
+  "windings_vs_scan_peaks_inner_to_outer": [
+   [
+    29,
+    20
+   ],
+   [
+    29,
+    26
+   ],
+   [
+    25,
+    27
+   ],
+   [
+    25,
+    25
+   ],
+   [
+    24,
+    26
+   ],
+   [
+    28,
+    28
+   ],
+   [
+    27,
+    19
+   ],
+   [
+    26,
+    31
+   ],
+   [
+    25,
+    30
+   ],
+   [
+    22,
+    23
+   ],
+   [
+    27,
+    23
+   ],
+   [
+    26,
+    17
+   ]
+  ],
+  "per_ray_ours_vs_scan": [
+   {
+    "ray": "15",
+    "ours": 29,
+    "peaks_k1": 20,
+    "peaks_k2": 14,
+    "peaks_k3": 13,
+    "period": 27,
+    "count_from_period": 13.6
+   },
+   {
+    "ray": "45",
+    "ours": 29,
+    "peaks_k1": 26,
+    "peaks_k2": 18,
+    "peaks_k3": 15,
+    "period": 27,
+    "count_from_period": 20.0
+   },
+   {
+    "ray": "75",
+    "ours": 25,
+    "peaks_k1": 27,
+    "peaks_k2": 18,
+    "peaks_k3": 15,
+    "period": 40,
+    "count_from_period": 15.3
+   },
+   {
+    "ray": "105",
+    "ours": 25,
+    "peaks_k1": 25,
+    "peaks_k2": 19,
+    "peaks_k3": 16,
+    "period": 17,
+    "count_from_period": 31.1
+   },
+   {
+    "ray": "135",
+    "ours": 24,
+    "peaks_k1": 26,
+    "peaks_k2": 20,
+    "peaks_k3": 16,
+    "period": 32,
+    "count_from_period": 17.1
+   },
+   {
+    "ray": "165",
+    "ours": 28,
+    "peaks_k1": 28,
+    "peaks_k2": 23,
+    "peaks_k3": 13,
+    "period": 34,
+    "count_from_period": 21.1
+   },
+   {
+    "ray": "195",
+    "ours": 27,
+    "peaks_k1": 19,
+    "peaks_k2": 13,
+    "peaks_k3": 9,
+    "period": 28,
+    "count_from_period": 14.4
+   },
+   {
+    "ray": "225",
+    "ours": 26,
+    "peaks_k1": 31,
+    "peaks_k2": 20,
+    "peaks_k3": 17,
+    "period": 26,
+    "count_from_period": 27.8
+   },
+   {
+    "ray": "255",
+    "ours": 25,
+    "peaks_k1": 30,
+    "peaks_k2": 22,
+    "peaks_k3": 19,
+    "period": 25,
+    "count_from_period": 21.6
+   },
+   {
+    "ray": "285",
+    "ours": 22,
+    "peaks_k1": 23,
+    "peaks_k2": 18,
+    "peaks_k3": 15,
+    "period": 37,
+    "count_from_period": 10.6
+   },
+   {
+    "ray": "315",
+    "ours": 27,
+    "peaks_k1": 23,
+    "peaks_k2": 16,
+    "peaks_k3": 12,
+    "period": 32,
+    "count_from_period": 11.9
+   },
+   {
+    "ray": "345",
+    "ours": 26,
+    "peaks_k1": 17,
+    "peaks_k2": 15,
+    "peaks_k3": 11,
+    "period": 23,
+    "count_from_period": 12.4
+   }
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+files 3 | meshes with both maps 340 | retried 23
+population:
+  fwd >=0.5      median 0.0123  p90 0.0304  p99 0.0895  max 0.1347
+  fwd >=0.75     median 0.0049  p90 0.0148  p99 0.0463  max 0.0774
+  rev >=0.5      median 0.0149  p90 0.0370  p99 0.1699  max 0.2108
+  rev >=0.75     median 0.0060  p90 0.0184  p99 0.0850  max 0.1244
+  fwd/rev @0.75  median 0.7839  p90 2.1660  p99 23.2665  max 117.0553
+  meshes with fwd >= rev at 0.75: 127 of 340
+top 10 by fwd >=0.75:
+   PHerc0813/z13088_w040        fwd 0.0774  rev 0.0066  ratio 11.5
+   PHerc0813/z12496_w060        fwd 0.0674  rev 0.0126  ratio 5.3
+   PHerc0358/z11280_w020        fwd 0.0495  rev 0.0090  ratio 5.5
+   PHerc0813/z6496_w040         fwd 0.0463  rev 0.0386  ratio 1.2
+   PHerc0211/z11520_w020        fwd 0.0423  rev 0.0558  ratio 0.8
+   PHerc0211/z7920_w020         fwd 0.0402  rev 0.0850  ratio 0.5
+   PHerc0813/z7696_w020         fwd 0.0376  rev 0.0466  ratio 0.8
+   PHerc0813/z6496_w020         fwd 0.0302  rev 0.0469  ratio 0.6
+   PHerc0800/z9872_w020         fwd 0.0257  rev 0.0010  ratio 23.3
+   PHerc0211/z9120_w020         fwd 0.0253  rev 0.0552  ratio 0.5
+candidate PHerc0358/z11280_w020        fwd>=0.75 0.0495 (99.1 pct of population), ratio 5.5 (97.4 pct), above population max: False

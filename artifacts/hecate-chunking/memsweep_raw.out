@@ -1,0 +1,25 @@
+{"peak_alloc_gib": 15.153243064880371, "peak_reserved_gib": 20.634765625, "total_gib": 44.431640625, "wall_s": 52.5, "error": null, "canvas": "2p5", "batch": 64, "precision": "fp32", "total_wall_s": 55.0}
+{"peak_alloc_gib": 7.822554588317871, "peak_reserved_gib": 10.623046875, "total_gib": 44.431640625, "wall_s": 53.9, "error": null, "canvas": "2p5", "batch": 32, "precision": "fp32", "total_wall_s": 56.0}
+{"peak_alloc_gib": 4.156477928161621, "peak_reserved_gib": 5.6015625, "total_gib": 44.431640625, "wall_s": 54.9, "error": null, "canvas": "2p5", "batch": 16, "precision": "fp32", "total_wall_s": 57.1}
+{"peak_alloc_gib": 2.324660301208496, "peak_reserved_gib": 3.099609375, "total_gib": 44.431640625, "wall_s": 56.3, "error": null, "canvas": "2p5", "batch": 8, "precision": "fp32", "total_wall_s": 58.6}
+{"peak_alloc_gib": 15.153243064880371, "peak_reserved_gib": 20.634765625, "total_gib": 44.431640625, "wall_s": 239.8, "error": null, "canvas": "11p5", "batch": 64, "precision": "fp32", "total_wall_s": 242.1}
+{"peak_alloc_gib": 7.822554588317871, "peak_reserved_gib": 10.623046875, "total_gib": 44.431640625, "wall_s": 247.5, "error": null, "canvas": "11p5", "batch": 32, "precision": "fp32", "total_wall_s": 249.8}
+{"peak_alloc_gib": 4.156477928161621, "peak_reserved_gib": 5.6015625, "total_gib": 44.431640625, "wall_s": 250.6, "error": null, "canvas": "11p5", "batch": 16, "precision": "fp32", "total_wall_s": 252.9}
+{"peak_alloc_gib": 2.324660301208496, "peak_reserved_gib": 3.103515625, "total_gib": 44.431640625, "wall_s": 257.7, "error": null, "canvas": "11p5", "batch": 8, "precision": "fp32", "total_wall_s": 259.8}
+{"peak_alloc_gib": 15.153243064880371, "peak_reserved_gib": 20.634765625, "total_gib": 44.431640625, "wall_s": 622.6, "error": null, "canvas": "29p8", "batch": 64, "precision": "fp32", "total_wall_s": 624.6}
+{"peak_alloc_gib": 7.822554588317871, "peak_reserved_gib": 10.62109375, "total_gib": 44.431640625, "wall_s": 641.3, "error": null, "canvas": "29p8", "batch": 32, "precision": "fp32", "total_wall_s": 643.4}
+{"peak_alloc_gib": 4.156477928161621, "peak_reserved_gib": 5.6015625, "total_gib": 44.431640625, "wall_s": 649.1, "error": null, "canvas": "29p8", "batch": 16, "precision": "fp32", "total_wall_s": 651.4}
+{"peak_alloc_gib": 2.324660301208496, "peak_reserved_gib": 3.099609375, "total_gib": 44.431640625, "wall_s": 666.2, "error": null, "canvas": "29p8", "batch": 8, "precision": "fp32", "total_wall_s": 668.1}
+{"peak_alloc_gib": 11.996993064880371, "peak_reserved_gib": 14.634765625, "total_gib": 44.431640625, "wall_s": 32.5, "error": null, "canvas": "2p5", "batch": 64, "precision": "bf16", "total_wall_s": 34.7}
+{"peak_alloc_gib": 6.244429588317871, "peak_reserved_gib": 7.623046875, "total_gib": 44.431640625, "wall_s": 32.9, "error": null, "canvas": "2p5", "batch": 32, "precision": "bf16", "total_wall_s": 34.9}
+{"peak_alloc_gib": 3.367415428161621, "peak_reserved_gib": 4.1015625, "total_gib": 44.431640625, "wall_s": 33.7, "error": null, "canvas": "2p5", "batch": 16, "precision": "bf16", "total_wall_s": 35.7}
+{"peak_alloc_gib": 1.930129051208496, "peak_reserved_gib": 2.3515625, "total_gib": 44.431640625, "wall_s": 34.5, "error": null, "canvas": "2p5", "batch": 8, "precision": "bf16", "total_wall_s": 36.6}
+{"peak_alloc_gib": 11.996993064880371, "peak_reserved_gib": 14.634765625, "total_gib": 44.431640625, "wall_s": 145.6, "error": null, "canvas": "11p5", "batch": 64, "precision": "bf16", "total_wall_s": 147.7}
+{"peak_alloc_gib": 6.244429588317871, "peak_reserved_gib": 7.62109375, "total_gib": 44.431640625, "wall_s": 148.4, "error": null, "canvas": "11p5", "batch": 32, "precision": "bf16", "total_wall_s": 150.5}
+{"peak_alloc_gib": 3.367415428161621, "peak_reserved_gib": 4.1015625, "total_gib": 44.431640625, "wall_s": 151.6, "error": null, "canvas": "11p5", "batch": 16, "precision": "bf16", "total_wall_s": 153.7}
+{"peak_alloc_gib": 1.930129051208496, "peak_reserved_gib": 2.353515625, "total_gib": 44.431640625, "wall_s": 154.9, "error": null, "canvas": "11p5", "batch": 8, "precision": "bf16", "total_wall_s": 157.1}
+{"peak_alloc_gib": 11.996993064880371, "peak_reserved_gib": 14.634765625, "total_gib": 44.431640625, "wall_s": 376.6, "error": null, "canvas": "29p8", "batch": 64, "precision": "bf16", "total_wall_s": 378.7}
+{"peak_alloc_gib": 6.244429588317871, "peak_reserved_gib": 7.62109375, "total_gib": 44.431640625, "wall_s": 383.9, "error": null, "canvas": "29p8", "batch": 32, "precision": "bf16", "total_wall_s": 386.1}
+{"peak_alloc_gib": 3.367415428161621, "peak_reserved_gib": 4.1015625, "total_gib": 44.431640625, "wall_s": 391.8, "error": null, "canvas": "29p8", "batch": 16, "precision": "bf16", "total_wall_s": 394.0}
+{"peak_alloc_gib": 1.930129051208496, "peak_reserved_gib": 2.3515625, "total_gib": 44.431640625, "wall_s": 399.6, "error": null, "canvas": "29p8", "batch": 8, "precision": "bf16", "total_wall_s": 401.6}
+SWEEP DONE

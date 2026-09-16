@@ -1,0 +1,2494 @@
+[
+{
+"mesh": "PHerc0813/z4704_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2516
+},
+{
+"mesh": "PHerc0813/z4704_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2516
+},
+{
+"mesh": "PHerc0813/z4704_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7560
+},
+{
+"mesh": "PHerc0813/z4704_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7560
+},
+{
+"mesh": "PHerc0813/z4704_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12250
+},
+{
+"mesh": "PHerc0813/z4704_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12250
+},
+{
+"mesh": "PHerc0813/z4704_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 22610
+},
+{
+"mesh": "PHerc0813/z4704_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 22610
+},
+{
+"mesh": "PHerc0813/z4704_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 28762
+},
+{
+"mesh": "PHerc0813/z4704_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 28762
+},
+{
+"mesh": "PHerc0813/z5296_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2535
+},
+{
+"mesh": "PHerc0813/z5296_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2535
+},
+{
+"mesh": "PHerc0813/z5296_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8000
+},
+{
+"mesh": "PHerc0813/z5296_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8000
+},
+{
+"mesh": "PHerc0813/z5296_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12561
+},
+{
+"mesh": "PHerc0813/z5296_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12561
+},
+{
+"mesh": "PHerc0813/z5296_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17360
+},
+{
+"mesh": "PHerc0813/z5296_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17360
+},
+{
+"mesh": "PHerc0813/z5296_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 24960
+},
+{
+"mesh": "PHerc0813/z5296_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 24960
+},
+{
+"mesh": "PHerc0813/z5888_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3256
+},
+{
+"mesh": "PHerc0813/z5888_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3256
+},
+{
+"mesh": "PHerc0813/z5888_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7525
+},
+{
+"mesh": "PHerc0813/z5888_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7525
+},
+{
+"mesh": "PHerc0813/z5888_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11160
+},
+{
+"mesh": "PHerc0813/z5888_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11160
+},
+{
+"mesh": "PHerc0813/z5888_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17108
+},
+{
+"mesh": "PHerc0813/z5888_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17108
+},
+{
+"mesh": "PHerc0813/z5888_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 22572
+},
+{
+"mesh": "PHerc0813/z5888_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 22572
+},
+{
+"mesh": "PHerc0813/z6496_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 4416
+},
+{
+"mesh": "PHerc0813/z6496_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 4416
+},
+{
+"mesh": "PHerc0813/z6496_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11224
+},
+{
+"mesh": "PHerc0813/z6496_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11224
+},
+{
+"mesh": "PHerc0813/z6496_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17353
+},
+{
+"mesh": "PHerc0813/z6496_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17353
+},
+{
+"mesh": "PHerc0813/z6496_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 24069
+},
+{
+"mesh": "PHerc0813/z6496_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 24069
+},
+{
+"mesh": "PHerc0813/z6496_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 28566
+},
+{
+"mesh": "PHerc0813/z6496_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 28566
+},
+{
+"mesh": "PHerc0813/z7104_w020",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+1619,
+2750
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 4250
+},
+{
+"mesh": "PHerc0813/z7104_w020",
+"dir": "hecate_rev.log",
+"shape": [
+31,
+1619,
+2750
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 4250
+},
+{
+"mesh": "PHerc0813/z7104_w040",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+1814,
+5247
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 9128
+},
+{
+"mesh": "PHerc0813/z7104_w040",
+"dir": "hecate_rev.log",
+"shape": [
+31,
+1814,
+5247
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 9128
+},
+{
+"mesh": "PHerc0813/z7104_w060",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+2028,
+7704
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 15120
+},
+{
+"mesh": "PHerc0813/z7104_w060",
+"dir": "hecate_rev.log",
+"shape": [
+31,
+2028,
+7704
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 15120
+},
+{
+"mesh": "PHerc0813/z7104_w080",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+1931,
+10337
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 19380
+},
+{
+"mesh": "PHerc0813/z7104_w080",
+"dir": "hecate_rev.log",
+"shape": [
+31,
+1931,
+10337
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 19380
+},
+{
+"mesh": "PHerc0813/z7104_w100",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+1697,
+12678
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 20988
+},
+{
+"mesh": "PHerc0813/z7104_w100",
+"dir": "hecate_rev.log",
+"shape": [
+31,
+1697,
+12678
+],
+"oom": true,
+"other_proc_gib": 34.21,
+"patches": 20988
+},
+{
+"mesh": "PHerc0813/z7696_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3294
+},
+{
+"mesh": "PHerc0813/z7696_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3294
+},
+{
+"mesh": "PHerc0813/z7696_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7980
+},
+{
+"mesh": "PHerc0813/z7696_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7980
+},
+{
+"mesh": "PHerc0813/z7696_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12900
+},
+{
+"mesh": "PHerc0813/z7696_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12900
+},
+{
+"mesh": "PHerc0813/z7696_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18081
+},
+{
+"mesh": "PHerc0813/z7696_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18081
+},
+{
+"mesh": "PHerc0813/z7696_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 23725
+},
+{
+"mesh": "PHerc0813/z7696_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 23725
+},
+{
+"mesh": "PHerc0813/z8288_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3650
+},
+{
+"mesh": "PHerc0813/z8288_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3650
+},
+{
+"mesh": "PHerc0813/z8288_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8265
+},
+{
+"mesh": "PHerc0813/z8288_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8265
+},
+{
+"mesh": "PHerc0813/z8288_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11250
+},
+{
+"mesh": "PHerc0813/z8288_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11250
+},
+{
+"mesh": "PHerc0813/z8288_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14570
+},
+{
+"mesh": "PHerc0813/z8288_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14570
+},
+{
+"mesh": "PHerc0813/z8288_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17860
+},
+{
+"mesh": "PHerc0813/z8288_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17860
+},
+{
+"mesh": "PHerc0813/z9504_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3648
+},
+{
+"mesh": "PHerc0813/z9504_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3648
+},
+{
+"mesh": "PHerc0813/z9504_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11122
+},
+{
+"mesh": "PHerc0813/z9504_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11122
+},
+{
+"mesh": "PHerc0813/z9504_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17043
+},
+{
+"mesh": "PHerc0813/z9504_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17043
+},
+{
+"mesh": "PHerc0813/z9504_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 21440
+},
+{
+"mesh": "PHerc0813/z9504_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 21440
+},
+{
+"mesh": "PHerc0813/z9504_w100",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+2126,
+12639
+],
+"oom": false,
+"other_proc_gib": null,
+"patches": 26004
+},
+{
+"mesh": "PHerc0813/z9504_w100",
+"dir": "hecate_rev.log",
+"shape": [
+31,
+2126,
+12639
+],
+"oom": false,
+"other_proc_gib": null,
+"patches": 26004
+},
+{
+"mesh": "PHerc0813/z11296_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2380
+},
+{
+"mesh": "PHerc0813/z11296_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2380
+},
+{
+"mesh": "PHerc0813/z11296_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6670
+},
+{
+"mesh": "PHerc0813/z11296_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6670
+},
+{
+"mesh": "PHerc0813/z11296_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10488
+},
+{
+"mesh": "PHerc0813/z11296_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10488
+},
+{
+"mesh": "PHerc0813/z11296_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14976
+},
+{
+"mesh": "PHerc0813/z11296_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14976
+},
+{
+"mesh": "PHerc0813/z11296_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 24190
+},
+{
+"mesh": "PHerc0813/z11296_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 24190
+},
+{
+"mesh": "PHerc0813/z11904_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2584
+},
+{
+"mesh": "PHerc0813/z11904_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2584
+},
+{
+"mesh": "PHerc0813/z11904_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5890
+},
+{
+"mesh": "PHerc0813/z11904_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5890
+},
+{
+"mesh": "PHerc0813/z11904_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10948
+},
+{
+"mesh": "PHerc0813/z11904_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10948
+},
+{
+"mesh": "PHerc0813/z11904_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14124
+},
+{
+"mesh": "PHerc0813/z11904_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14124
+},
+{
+"mesh": "PHerc0813/z11904_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17010
+},
+{
+"mesh": "PHerc0813/z11904_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17010
+},
+{
+"mesh": "PHerc0813/z12496_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2652
+},
+{
+"mesh": "PHerc0813/z12496_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2652
+},
+{
+"mesh": "PHerc0813/z12496_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5928
+},
+{
+"mesh": "PHerc0813/z12496_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5928
+},
+{
+"mesh": "PHerc0813/z12496_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11809
+},
+{
+"mesh": "PHerc0813/z12496_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11809
+},
+{
+"mesh": "PHerc0813/z12496_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17225
+},
+{
+"mesh": "PHerc0813/z12496_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17225
+},
+{
+"mesh": "PHerc0813/z12496_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 20910
+},
+{
+"mesh": "PHerc0813/z12496_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 20910
+},
+{
+"mesh": "PHerc0813/z13088_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2482
+},
+{
+"mesh": "PHerc0813/z13088_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2482
+},
+{
+"mesh": "PHerc0813/z13088_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5075
+},
+{
+"mesh": "PHerc0813/z13088_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5075
+},
+{
+"mesh": "PHerc0813/z13088_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10488
+},
+{
+"mesh": "PHerc0813/z13088_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10488
+},
+{
+"mesh": "PHerc0813/z13088_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15550
+},
+{
+"mesh": "PHerc0813/z13088_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15550
+},
+{
+"mesh": "PHerc0813/z13088_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19941
+},
+{
+"mesh": "PHerc0813/z13088_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19941
+},
+{
+"mesh": "PHerc0813/z13696_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2584
+},
+{
+"mesh": "PHerc0813/z13696_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2584
+},
+{
+"mesh": "PHerc0813/z13696_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5510
+},
+{
+"mesh": "PHerc0813/z13696_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5510
+},
+{
+"mesh": "PHerc0813/z13696_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10608
+},
+{
+"mesh": "PHerc0813/z13696_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10608
+},
+{
+"mesh": "PHerc0813/z13696_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14700
+},
+{
+"mesh": "PHerc0813/z13696_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14700
+},
+{
+"mesh": "PHerc0813/z13696_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19764
+},
+{
+"mesh": "PHerc0813/z13696_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19764
+},
+{
+"mesh": "PHerc0813/z14304_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2982
+},
+{
+"mesh": "PHerc0813/z14304_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2982
+},
+{
+"mesh": "PHerc0813/z14304_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6996
+},
+{
+"mesh": "PHerc0813/z14304_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6996
+},
+{
+"mesh": "PHerc0813/z14304_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11136
+},
+{
+"mesh": "PHerc0813/z14304_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11136
+},
+{
+"mesh": "PHerc0813/z14304_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15964
+},
+{
+"mesh": "PHerc0813/z14304_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15964
+},
+{
+"mesh": "PHerc0813/z14304_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 21056
+},
+{
+"mesh": "PHerc0813/z14304_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 21056
+},
+{
+"mesh": "PHerc0813/z14896_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2850
+},
+{
+"mesh": "PHerc0813/z14896_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2850
+},
+{
+"mesh": "PHerc0813/z14896_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6080
+},
+{
+"mesh": "PHerc0813/z14896_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6080
+},
+{
+"mesh": "PHerc0813/z14896_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10464
+},
+{
+"mesh": "PHerc0813/z14896_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10464
+},
+{
+"mesh": "PHerc0813/z14896_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14500
+},
+{
+"mesh": "PHerc0813/z14896_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14500
+},
+{
+"mesh": "PHerc0813/z14896_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18666
+},
+{
+"mesh": "PHerc0813/z14896_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18666
+},
+{
+"mesh": "PHerc0125/z6336_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3400
+},
+{
+"mesh": "PHerc0125/z6336_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3400
+},
+{
+"mesh": "PHerc0125/z6336_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6720
+},
+{
+"mesh": "PHerc0125/z6336_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6720
+},
+{
+"mesh": "PHerc0125/z6336_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10080
+},
+{
+"mesh": "PHerc0125/z6336_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10080
+},
+{
+"mesh": "PHerc0125/z6336_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12390
+},
+{
+"mesh": "PHerc0125/z6336_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12390
+},
+{
+"mesh": "PHerc0125/z6336_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 20286
+},
+{
+"mesh": "PHerc0125/z6336_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 20286
+},
+{
+"mesh": "PHerc0125/z6944_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3400
+},
+{
+"mesh": "PHerc0125/z6944_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3400
+},
+{
+"mesh": "PHerc0125/z6944_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7020
+},
+{
+"mesh": "PHerc0125/z6944_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7020
+},
+{
+"mesh": "PHerc0125/z6944_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11320
+},
+{
+"mesh": "PHerc0125/z6944_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 11320
+},
+{
+"mesh": "PHerc0125/z6944_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14320
+},
+{
+"mesh": "PHerc0125/z6944_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14320
+},
+{
+"mesh": "PHerc0125/z6944_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15715
+},
+{
+"mesh": "PHerc0125/z6944_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15715
+},
+{
+"mesh": "PHerc0125/z8144_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3570
+},
+{
+"mesh": "PHerc0125/z8144_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3570
+},
+{
+"mesh": "PHerc0125/z8144_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8000
+},
+{
+"mesh": "PHerc0125/z8144_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8000
+},
+{
+"mesh": "PHerc0125/z8144_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12690
+},
+{
+"mesh": "PHerc0125/z8144_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12690
+},
+{
+"mesh": "PHerc0125/z8144_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13604
+},
+{
+"mesh": "PHerc0125/z8144_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13604
+},
+{
+"mesh": "PHerc0125/z8144_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 16280
+},
+{
+"mesh": "PHerc0125/z8144_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 16280
+},
+{
+"mesh": "PHerc0125/z8736_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3638
+},
+{
+"mesh": "PHerc0125/z8736_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3638
+},
+{
+"mesh": "PHerc0125/z8736_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6630
+},
+{
+"mesh": "PHerc0125/z8736_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6630
+},
+{
+"mesh": "PHerc0125/z8736_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13248
+},
+{
+"mesh": "PHerc0125/z8736_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13248
+},
+{
+"mesh": "PHerc0125/z8736_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13357
+},
+{
+"mesh": "PHerc0125/z8736_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13357
+},
+{
+"mesh": "PHerc0125/z8736_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15575
+},
+{
+"mesh": "PHerc0125/z8736_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15575
+},
+{
+"mesh": "PHerc0125/z9344_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3638
+},
+{
+"mesh": "PHerc0125/z9344_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3638
+},
+{
+"mesh": "PHerc0125/z9344_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 9840
+},
+{
+"mesh": "PHerc0125/z9344_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 9840
+},
+{
+"mesh": "PHerc0125/z9344_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17342
+},
+{
+"mesh": "PHerc0125/z9344_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17342
+},
+{
+"mesh": "PHerc0125/z9344_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14840
+},
+{
+"mesh": "PHerc0125/z9344_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14840
+},
+{
+"mesh": "PHerc0125/z9344_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15820
+},
+{
+"mesh": "PHerc0125/z9344_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15820
+},
+{
+"mesh": "PHerc0125/z9936_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3604
+},
+{
+"mesh": "PHerc0125/z9936_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3604
+},
+{
+"mesh": "PHerc0125/z9936_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7174
+},
+{
+"mesh": "PHerc0125/z9936_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7174
+},
+{
+"mesh": "PHerc0125/z9936_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18361
+},
+{
+"mesh": "PHerc0125/z9936_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18361
+},
+{
+"mesh": "PHerc0125/z9936_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17390
+},
+{
+"mesh": "PHerc0125/z9936_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17390
+},
+{
+"mesh": "PHerc0125/z9936_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18819
+},
+{
+"mesh": "PHerc0125/z9936_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18819
+},
+{
+"mesh": "PHerc0125/z10544_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3842
+},
+{
+"mesh": "PHerc0125/z10544_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3842
+},
+{
+"mesh": "PHerc0125/z10544_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6936
+},
+{
+"mesh": "PHerc0125/z10544_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6936
+},
+{
+"mesh": "PHerc0125/z10544_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18837
+},
+{
+"mesh": "PHerc0125/z10544_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 18837
+},
+{
+"mesh": "PHerc0125/z10544_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17158
+},
+{
+"mesh": "PHerc0125/z10544_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17158
+},
+{
+"mesh": "PHerc0125/z10544_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19608
+},
+{
+"mesh": "PHerc0125/z10544_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19608
+},
+{
+"mesh": "PHerc0125/z11744_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3910
+},
+{
+"mesh": "PHerc0125/z11744_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3910
+},
+{
+"mesh": "PHerc0125/z11744_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6936
+},
+{
+"mesh": "PHerc0125/z11744_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6936
+},
+{
+"mesh": "PHerc0125/z11744_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12642
+},
+{
+"mesh": "PHerc0125/z11744_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12642
+},
+{
+"mesh": "PHerc0125/z11744_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13690
+},
+{
+"mesh": "PHerc0125/z11744_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13690
+},
+{
+"mesh": "PHerc0125/z11744_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17057
+},
+{
+"mesh": "PHerc0125/z11744_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17057
+},
+{
+"mesh": "PHerc0125/z14144_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3604
+},
+{
+"mesh": "PHerc0125/z14144_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3604
+},
+{
+"mesh": "PHerc0125/z14144_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7164
+},
+{
+"mesh": "PHerc0125/z14144_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7164
+},
+{
+"mesh": "PHerc0125/z14144_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10166
+},
+{
+"mesh": "PHerc0125/z14144_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10166
+},
+{
+"mesh": "PHerc0125/z14144_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13572
+},
+{
+"mesh": "PHerc0125/z14144_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13572
+},
+{
+"mesh": "PHerc0125/z14144_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19068
+},
+{
+"mesh": "PHerc0125/z14144_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 19068
+},
+{
+"mesh": "PHerc0125/z14736_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3570
+},
+{
+"mesh": "PHerc0125/z14736_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3570
+},
+{
+"mesh": "PHerc0125/z14736_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6596
+},
+{
+"mesh": "PHerc0125/z14736_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6596
+},
+{
+"mesh": "PHerc0125/z14736_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14112
+},
+{
+"mesh": "PHerc0125/z14736_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14112
+},
+{
+"mesh": "PHerc0125/z14736_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12784
+},
+{
+"mesh": "PHerc0125/z14736_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12784
+},
+{
+"mesh": "PHerc0125/z14736_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17960
+},
+{
+"mesh": "PHerc0125/z14736_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 17960
+},
+{
+"mesh": "PHerc0125/z15344_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3740
+},
+{
+"mesh": "PHerc0125/z15344_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3740
+},
+{
+"mesh": "PHerc0125/z15344_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6902
+},
+{
+"mesh": "PHerc0125/z15344_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6902
+},
+{
+"mesh": "PHerc0125/z16544_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3706
+},
+{
+"mesh": "PHerc0125/z16544_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3706
+},
+{
+"mesh": "PHerc0125/z16544_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6698
+},
+{
+"mesh": "PHerc0125/z16544_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6698
+},
+{
+"mesh": "PHerc0125/z16544_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10841
+},
+{
+"mesh": "PHerc0125/z16544_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10841
+},
+{
+"mesh": "PHerc0125/z16544_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13125
+},
+{
+"mesh": "PHerc0125/z16544_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 13125
+},
+{
+"mesh": "PHerc0125/z16544_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14892
+},
+{
+"mesh": "PHerc0125/z16544_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14892
+},
+{
+"mesh": "PHerc0125/z17136_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3780
+},
+{
+"mesh": "PHerc0125/z17136_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3780
+},
+{
+"mesh": "PHerc0125/z17136_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8460
+},
+{
+"mesh": "PHerc0125/z17136_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 8460
+},
+{
+"mesh": "PHerc0125/z17136_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14076
+},
+{
+"mesh": "PHerc0125/z17136_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14076
+},
+{
+"mesh": "PHerc0125/z17136_w080",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14700
+},
+{
+"mesh": "PHerc0125/z17136_w080",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 14700
+},
+{
+"mesh": "PHerc0125/z17136_w100",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15725
+},
+{
+"mesh": "PHerc0125/z17136_w100",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 15725
+},
+{
+"mesh": "PHerc0257/z3744_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2888
+},
+{
+"mesh": "PHerc0257/z3744_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2888
+},
+{
+"mesh": "PHerc0257/z3744_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5550
+},
+{
+"mesh": "PHerc0257/z3744_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 5550
+},
+{
+"mesh": "PHerc0257/z3744_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 9198
+},
+{
+"mesh": "PHerc0257/z3744_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 9198
+},
+{
+"mesh": "PHerc0257/z4352_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3160
+},
+{
+"mesh": "PHerc0257/z4352_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 3160
+},
+{
+"mesh": "PHerc0257/z4352_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6930
+},
+{
+"mesh": "PHerc0257/z4352_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6930
+},
+{
+"mesh": "PHerc0257/z4352_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12446
+},
+{
+"mesh": "PHerc0257/z4352_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 12446
+},
+{
+"mesh": "PHerc0268/z3872_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2573
+},
+{
+"mesh": "PHerc0268/z3872_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2573
+},
+{
+"mesh": "PHerc0268/z3872_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 4800
+},
+{
+"mesh": "PHerc0268/z3872_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 4800
+},
+{
+"mesh": "PHerc0268/z3872_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7293
+},
+{
+"mesh": "PHerc0268/z3872_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 7293
+},
+{
+"mesh": "PHerc0268/z12272_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2590
+},
+{
+"mesh": "PHerc0268/z12272_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2590
+},
+{
+"mesh": "PHerc0268/z12272_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6072
+},
+{
+"mesh": "PHerc0268/z12272_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6072
+},
+{
+"mesh": "PHerc0268/z12272_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10241
+},
+{
+"mesh": "PHerc0268/z12272_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 10241
+},
+{
+"mesh": "PHerc0358/z11280_w020",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2660
+},
+{
+"mesh": "PHerc0358/z11280_w020",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 2660
+},
+{
+"mesh": "PHerc0358/z11280_w040",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6006
+},
+{
+"mesh": "PHerc0358/z11280_w040",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 6006
+},
+{
+"mesh": "PHerc0358/z11280_w060",
+"dir": "hecate_fwd.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 9200
+},
+{
+"mesh": "PHerc0358/z11280_w060",
+"dir": "hecate_rev.log",
+"shape": null,
+"oom": false,
+"other_proc_gib": null,
+"patches": 9200
+},
+{
+"mesh": "PHerc0826/z6528_w020",
+"dir": "hecate_fwd.log",
+"shape": [
+31,
+1677,
+2555
+],
+"oom": false,
+"other_proc_gib": null,
+"patches": 4108
+}
+]
