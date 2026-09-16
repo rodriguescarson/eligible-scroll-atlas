@@ -71,7 +71,9 @@ hit. At batch 32 it is 21.2 GiB, at batch 16 it is 11.2 GiB. Any of those would 
 
 Three tensors stay alive long after their last use: the conv1 output, the `feats` list, and above all the encoder pyramid bound
 as `feat_maps`, which is 85 MiB per patch and about 39 percent of peak. Releasing them is arithmetic-free. Before touching the
-code we fixed the bar: byte-identical output PNGs as the acceptance test, and peak **reserved** memory as the metric, because
+code we fixed the bar, and published it first, so the order is checkable rather than asserted: commit `a8ede96` carries
+the bar and the metric, the branch tip `8460ddc` still carried them five minutes before the pod that ran this existed,
+and the result was committed afterwards. The bar: byte-identical output PNGs as the acceptance test, and peak **reserved** memory as the metric, because
 peak live memory falling does not guarantee reserved memory follows. Written down in advance: if reserved does not move, the
 patch is dropped and the null is what gets reported.
 
