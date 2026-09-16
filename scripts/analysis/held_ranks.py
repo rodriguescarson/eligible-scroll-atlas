@@ -2,7 +2,8 @@
 import json, math, sys
 from collections import defaultdict
 HELD = ["PHerc0813/z13088_w040", "PHerc0813/z12496_w060", "PHerc0813/z7696_w020", "PHerc0813/z5888_w020", "PHerc0358/z11280_w020"]
-NOTE = {"PHerc0813/z12496_w060": "TAUIL's known false positive", "PHerc0358/z11280_w020": "measured in the candidate run, not in these files"}
+NOTE = {"PHerc0813/z12496_w060": "TAUIL's known false positive"}
+# a mesh first scored in the candidate run can later appear in the main pass; label by what the files actually contain
 rows = {}
 for a in sys.argv[1:]:
     for line in open(a):
@@ -25,7 +26,7 @@ for h in HELD:
         if r <= 10: in_top10 += 1
         print("  %-26s rank %3d of %d (top %.1f%%)  fwd %.4f  rev %.4f  ratio %5.1f  %s" % (h, r, N, 100.0 * r / N, f, v, (f + 1e-4) / (v + 1e-4), NOTE.get(h, "")))
     else:
-        print("  %-26s not in these files  %s" % (h, NOTE.get(h, "")))
+        print("  %-26s not scored in these files  %s" % (h, NOTE.get(h, "")))
 scored = [h for h in HELD if h in rows]
 if scored:
     K, n, k = 10, len(scored), in_top10

@@ -4,9 +4,12 @@
 import json, math, glob, os
 from huggingface_hub import snapshot_download
 R = "rodriguescarson/eligible-scroll-atlas-held"
-TOK = open("/workspace/atlas/.hf_token").read().strip()
+TOK = open("/workspace/atlas/.hf_token").read().strip() if os.path.exists("/workspace/atlas/.hf_token") else None
 hec = {}
-for line in open("/tmp/hecate_all.jsonl"):
+import sys
+STATS = [a for a in sys.argv[1:] if a.endswith((".jsonl",))] or ["/tmp/hecate_all.jsonl"]
+SCREENS = next((a for a in sys.argv[1:] if not a.endswith(".jsonl")), "/workspace/screens_all/screens_all")
+for line in (l for f in STATS for l in open(f)):
     line = line.strip()
     if not line: continue
     try: r = json.loads(line)
@@ -15,9 +18,12 @@ for line in open("/tmp/hecate_all.jsonl"):
     if isinstance(f, dict) and isinstance(v, dict) and "ge_0.75" in f:
         hec[r["mesh"]] = (f["ge_0.75"], v["ge_0.75"])
 print("hecate meshes:", len(hec))
-d = snapshot_download(R, repo_type="dataset", token=TOK, local_dir="/workspace/screens_all",
-                      allow_patterns=["screens_all/*/*/ink-detection/screens_all.json"])
-files = glob.glob(f"{d}/screens_all/*/*/ink-detection/screens_all.json")
+if os.path.isdir(SCREENS):
+    files = glob.glob(f"{SCREENS}/*/*/ink-detection/screens_all.json")
+else:
+    d = snapshot_download(R, repo_type="dataset", token=TOK, local_dir="/workspace/screens_all",
+                          allow_patterns=["screens_all/*/*/ink-detection/screens_all.json"])
+    files = glob.glob(f"{d}/screens_all/*/*/ink-detection/screens_all.json")
 print("screens files:", len(files))
 ink = {}
 for p in files:
