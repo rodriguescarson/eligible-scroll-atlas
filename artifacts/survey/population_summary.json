@@ -1,0 +1,138 @@
+{
+ "screened": 340,
+ "missing_screens": [],
+ "thr0.627_pass": {
+  "all": 5,
+  "primary (aligned<30, not reprova)": 5,
+  "secondary (aligned<30)": 5
+ },
+ "thr0.627_pass_v2": {
+  "all": 2,
+  "primary (aligned<30, not reprova)": 2,
+  "secondary (aligned<30)": 2
+ },
+ "thr0.75_pass": {
+  "all": 0,
+  "primary (aligned<30, not reprova)": 0,
+  "secondary (aligned<30)": 0
+ },
+ "thr0.75_pass_v2": {
+  "all": 1,
+  "primary (aligned<30, not reprova)": 1,
+  "secondary (aligned<30)": 1
+ },
+ "denominators": {
+  "all": 340,
+  "primary": 297,
+  "secondary": 327
+ },
+ "held": [
+  [
+   "PHerc0813/z5888_w020",
+   {
+    "thr0.627_pass": true,
+    "thr0.627_pass_v2": false,
+    "thr0.75_pass": false,
+    "thr0.75_pass_v2": false
+   }
+  ],
+  [
+   "PHerc0813/z7696_w020",
+   {
+    "thr0.627_pass": true,
+    "thr0.627_pass_v2": true,
+    "thr0.75_pass": false,
+    "thr0.75_pass_v2": false
+   }
+  ],
+  [
+   "PHerc0813/z12496_w060",
+   {
+    "thr0.627_pass": true,
+    "thr0.627_pass_v2": false,
+    "thr0.75_pass": false,
+    "thr0.75_pass_v2": true
+   }
+  ],
+  [
+   "PHerc0813/z13088_w040",
+   {
+    "thr0.627_pass": true,
+    "thr0.627_pass_v2": false,
+    "thr0.75_pass": false,
+    "thr0.75_pass_v2": false
+   }
+  ],
+  [
+   "PHerc0358/z11280_w020",
+   {
+    "thr0.627_pass": true,
+    "thr0.627_pass_v2": true,
+    "thr0.75_pass": false,
+    "thr0.75_pass_v2": false
+   }
+  ]
+ ],
+ "S1_at_160": {
+  "median": 0.001526911588946806,
+  "p90": 0.005997061549567869,
+  "p99": 0.026571964165621173,
+  "max": 0.040475201313677295,
+  "n_ge_faint_control_w051_0.0134": 10,
+  "n_ge_medium_control_w055_0.0149": 8,
+  "n_ge_strong_control_w058_0.0271": 2
+ },
+ "S3_pass_at_160": 104,
+ "S4_unanimous_pass_at_160": 64,
+ "reverse_gt_forward_at_160": 157,
+ "per_scroll": {
+  "PHerc0125": {
+   "meshes": 62,
+   "area_cm2": 389.4,
+   "any_pass": 0,
+   "S1_median": 0.00111
+  },
+  "PHerc0211": {
+   "meshes": 90,
+   "area_cm2": 539.7,
+   "any_pass": 0,
+   "S1_median": 0.00184
+  },
+  "PHerc0257": {
+   "meshes": 6,
+   "area_cm2": 22.7,
+   "any_pass": 0,
+   "S1_median": 0.0015
+  },
+  "PHerc0268": {
+   "meshes": 6,
+   "area_cm2": 19.6,
+   "any_pass": 0,
+   "S1_median": 0.00039
+  },
+  "PHerc0358": {
+   "meshes": 3,
+   "area_cm2": 11.1,
+   "any_pass": 1,
+   "S1_median": 0.00179
+  },
+  "PHerc0800": {
+   "meshes": 95,
+   "area_cm2": 501.9,
+   "any_pass": 0,
+   "S1_median": 0.00085
+  },
+  "PHerc0813": {
+   "meshes": 75,
+   "area_cm2": 437.0,
+   "any_pass": 4,
+   "S1_median": 0.00365
+  },
+  "PHerc0826": {
+   "meshes": 3,
+   "area_cm2": 14.1,
+   "any_pass": 0,
+   "S1_median": 0.00814
+  }
+ }
+}
