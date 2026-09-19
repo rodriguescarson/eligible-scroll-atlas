@@ -1,0 +1,38 @@
+2026-09-19T08:11:42Z JOB START steps=300 gpu=NVIDIA RTX 6000 Ada Generation, 595.91.07
+2026-09-19T08:11:42Z wrapper -> /usr/bin/runpodctl
+2026-09-19T08:11:49Z apt rc=0
+2026-09-19T08:11:52Z awscli rc=0
+2026-09-19T08:12:16Z hecate env rc=0 2.8.0+cu128 True
+2026-09-19T08:12:31Z villa pr=de41bfba9f94a2a9cdbc0e2470d26058a4c4452a (want de41bfba9f94a2a9cdbc0e2470d26058a4c4452a) base=b1ef996e357de0b2f24fb30198c6d9c32611d4fb
+downloads ok
+2026-09-19T08:12:35Z hecate.py sha256=c232c18a1a86cfb9 (want c232c18a1a86cfb9)
+2026-09-19T08:12:37Z control w042 render /workspace/h3d/w042/r96_31.zarr
+2026-09-19T08:12:44Z uv sync rc=0
+torch 2.11.0+cu128 cuda True
+2026-09-19T08:12:48Z umbilicus PHerc0826/representations/umbilicus/20250821151701-umbilicus-20260808113303.json rc=0
+2026-09-19T08:15:17Z lasagna nx rc=0 files=7692
+2026-09-19T08:17:45Z lasagna ny rc=0 files=7692
+2026-09-19T08:19:52Z lasagna grad_mag rc=0 files=7692
+2026-09-19T08:19:52Z tracks PHerc0826_20250821151701_surface_m7_L0_th0.2.extract.json rc=0 bytes=1121
+2026-09-19T08:22:00Z tracks PHerc0826_20250821151701_surface_m7_L0_th0.2.dbm rc=0 bytes=5422211072
+2026-09-19T08:22:28Z tracks PHerc0826_20250821151701_surface_m7_L0_th0.2.dbm.crossings.npz rc=0 bytes=1453225316
+crossings signature match=True version=1 expected=1
+2026-09-19T08:22:31Z VILLA SETUP FINISHED
+2026-09-19T08:23:59Z HECATE w042 rc=0 secs=682
+{"name": "w042", "n_ink": 2491180, "control_criterion_met": true} ink: {'argmax_offset': 0, 'LC': 0.663293, 'CF': 0.663293} nonink: {'argmax_offset': 1, 'LC': 0.624075, 'CF': 0.562535}
+2026-09-19T08:24:06Z PROFILE w042 rc=0
+2026-09-19T08:24:07Z control w043 render /workspace/h3d/w043/r96_31.zarr
+2026-09-19T08:36:05Z HECATE w043 rc=0 secs=718
+{"name": "w043", "n_ink": 3958700, "control_criterion_met": true} ink: {'argmax_offset': 0, 'LC': 0.754134, 'CF': 0.754134} nonink: {'argmax_offset': 1, 'LC': 0.66747, 'CF': 0.615395}
+2026-09-19T08:36:12Z PROFILE w043 rc=0
+2026-09-19T08:40:09Z RENDER fp rc=0 secs=236
+2026-09-19T08:42:08Z HECATE fp rc=0
+{"name": "fp_z12496_w060", "n_ink": 544661, "control_criterion_met": true} ink: {'argmax_offset': 1, 'LC': 0.648548, 'CF': 0.580778} nonink: {'argmax_offset': 7, 'LC': 0.294952, 'CF': 0.385638}
+2026-09-19T08:42:10Z PROFILE fp rc=0
+2026-09-19T08:42:10Z HECATE PART FINISHED
+2026-09-19T08:42:10Z villa setup joined
+2026-09-19T08:49:59Z FIT pr rc=0 secs=469
+2026-09-19T08:50:02Z EXPORT pr rc=1 PROOF checkpoint shell_outer_winding_idx=90 model_gap_expander_num_windings=90 model_gap_expander_capacity_windings=144 [spiral] reconstructing windings 10..90, z [6528, 7328), step 20 
+2026-09-19T08:51:19Z FIT base rc=0 secs=77
+2026-09-19T08:51:22Z EXPORT base rc=1 PROOF checkpoint shell_outer_winding_idx=130 model_gap_expander_num_windings=130 model_gap_expander_capacity_windings=144 [spiral] reconstructing windings 10..130, z [6528, 7328), step 20 
+2026-09-19T08:51:22Z Z JOB COMPLETE

@@ -6,26 +6,36 @@ September 2026. Raw data and harness in `artifacts/hecate-chunking/`.
 Three findings: one operational, one about precision, and one null. None of them asks you to change the code. The second
 may be worth a line in the README, and the third is reported because we pre-registered it and it came out negative.
 
-## 1. Peak GPU memory is flat in canvas size and linear in batch
+## 1. Live memory is flat in canvas size and linear in batch; reserved memory is not flat on a large real canvas
 
-24 runs of the released `hecate.py` on one A40 (44.43 GiB), torch 2.8.0+cu128, three canvases spanning the range we see in
-practice: 2.5, 11.5 and 29.8 megapixels at 31 planes.
+**Correction, 19 September 2026.** The first version of this section said peak GPU memory is flat in canvas size, and
+explained our 23 out-of-memory failures with the fp32 figure for two jobs at batch 64 (41.3 GiB). Both were wrong. Our
+population ran bf16, and the flat result only covers the synthetic canvases we measured, up to 29.8 megapixels. On a real
+47.3 megapixel render at bf16 batch 64, peak **allocated** memory was 12.00 GiB, the same as on the small canvases, but peak
+**reserved** memory was 28.79 GiB against 14.63. That reserve growth is what made two jobs collide. The run and its script
+are in `artifacts/hecate-3d/` (`peakmem_w043_bf16_b64.log`).
+
+24 runs of the released `hecate.py` on one A40 (44.43 GiB), torch 2.8.0+cu128, three synthetic canvases of 2.5, 11.5 and 29.8
+megapixels at 31 planes. Real surfaces run larger: PHerc0139 w043 is 47.3 megapixels.
 
 | Precision | batch 64 | batch 32 | batch 16 | batch 8 |
 |---|---|---|---|---|
 | fp32 | 20.63 | 10.62 | 5.60 | 3.10 |
 | bf16 | 14.63 | 7.62 | 4.10 | 2.35 |
 
-Peak reserved GiB. Every figure is identical at all three canvas sizes, so canvas area contributes nothing to peak memory; only
-wall time scales with it (53, 240 and 623 seconds at batch 64, fp32). That matches the code: the output accumulator, the Hann
-weight map and the result are disk-backed memmaps, and everything resident on the GPU scales with batch.
+Peak reserved GiB on the synthetic canvases. Every figure is identical at all three sizes and only wall time scales with
+area (53, 240 and 623 seconds at batch 64, fp32). Live tensors stay flat beyond that range too, which matches the code: the
+output accumulator, the Hann weight map and the result are disk-backed memmaps. What does not stay flat is how much the caching
+allocator holds on to: 28.79 GiB reserved on the 47.3 megapixel real render, with 12.00 GiB allocated. We have not separated
+whether that growth comes from canvas size or from real data rather than synthetic.
 
-**Why it mattered to us.** We ran two processes per card at `--batch-size 64`, which needs 41.3 GiB of a 44.43 GiB card in fp32.
-23 of 340 meshes died with out-of-memory, always with the neighbouring process holding 34.21 GiB, and every one succeeded when
-rerun alone. The tool's default of 1 is not the problem; our launch settings were. Two jobs fit comfortably at batch 32 (21.2 GiB)
-or 16 (11.2 GiB), and the cost is small: on the largest canvas, 623 s at batch 64 against 641 s at 32 and 649 s at 16.
+**Why it mattered to us.** We ran two processes per card at `--precision bf16 --batch-size 64`. On a small canvas one run
+reserves 14.63 GiB, so two fit on a 44.43 GiB card with room to spare. On a large real canvas one run reserves about 29 GiB, and
+two do not. 23 of 340 meshes died with out-of-memory, the neighbouring process holding 34.21 GiB each time, and every one
+succeeded when rerun alone. Each mesh ran in its own process, so this is not memory building up across meshes.
 
-A sentence in the README giving peak memory per patch, or the two-jobs-per-card arithmetic, would have saved us the failures.
+The practical advice is to size a card from peak **reserved** memory on your largest canvas, not from peak allocated or a small
+test render. Whether `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`, or tiling the canvas, would cap the reserve is untested.
 
 ## 2. `--precision bf16` takes 29 percent off peak, not half
 
