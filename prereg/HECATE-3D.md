@@ -54,3 +54,13 @@ A short PHerc0826 fit (tracks and normals only) on the PR branch with `"num_wind
 `spiral-scroll.json` and no winding override, and the same fit on unpatched main. Expected: the branch resolves
 `shell_outer_winding_idx = 90` and exports no winding at or above 90; main resolves 130. This is a check of the
 config plumbing, not a hypothesis test.
+
+## Amendment 1 (2026-09-19, before either run started)
+
+The #1830 expectation above is off by one, and this corrects it before any fit or export has run. Reading current
+villa main: the headless fit writes only `checkpoint_fitted.ckpt`; meshes come from `flatten_spiral_checkpoint.py`,
+which reconstructs windings `first..last` **inclusive** with `last = shell_outer_winding_idx` (the panel's
+preview path likewise uses `shell_outer_winding_idx + 1` as an exclusive bound). "Exports no winding at or above 90"
+came from notes about the older exporter. The expected result is now: the branch's checkpoint stores
+`shell_outer_winding_idx = 90` and the exporter reports `reconstructing windings 10..90`; main stores 130 and reports
+`10..130`. The Hecate criteria above are unchanged.
