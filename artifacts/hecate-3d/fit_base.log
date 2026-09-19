@@ -1,0 +1,89 @@
+PROGRESS Checking CUDA availability — elapsed 0s
+PROGRESS Loading umbilicus — elapsed 0s
+PROGRESS Loading fiber direction samples — elapsed 0s
+PROGRESS Loading point collections — elapsed 0s
+PROGRESS Loading fiber point collections — elapsed 0s
+PROGRESS Linking points to patches — 0 collections, 0 patches — elapsed 0s
+scaled per-step counts by 0.084 for the 800-slice z-range [6528, 7328) (reference 9500 slices):
+  sample_count_patches_per_step=30
+  sample_count_patches_per_step_for_dt=20
+  sample_count_unverified_patches_per_step=10
+  sample_count_unverified_patches_per_step_for_dt=7
+  sample_count_relative_winding_pcls=4
+  sample_count_absolute_winding_pcls=4
+  sample_count_unattached_pcls_per_step=7
+  sample_count_tracks_per_step=4042
+  sample_count_dense_normal_points=5053
+  sample_count_fiber_direction_points=5053
+  sample_count_dense_spacing_pairs=8000
+  sample_count_dense_spacing_density_extra_pairs=16000
+  sample_count_winding_model_relative_pairs=10779
+  sample_count_winding_model_density_pairs=10779
+  sample_count_dense_attachment_points=1684
+  sample_count_regularisation_points=379
+  sample_count_shell_samples=2070
+skipping all verified/unverified patch loading
+ loaded 0 patches
+ loaded 0 unverified patches
+linking points to patches: 0it [00:00, ?it/s]linking points to patches: 0it [00:00, ?it/s]
+PROGRESS Resolving track store — PHerc0826_20250821151701_surface_m7_L0_th0.2.dbm — elapsed 0s
+PROGRESS Loading tracks — 0/2,369 DB keys (0.0%) — elapsed 0s
+PROGRESS Loading tracks — 957/2,369 DB keys (40.4%) — elapsed 5s — ETA 7s
+PROGRESS Loading tracks — 1,351/2,369 DB keys (57.0%) — elapsed 10s — ETA 8s
+PROGRESS Loading tracks — 1,669/2,369 DB keys (70.5%) — elapsed 15s — ETA 6s
+PROGRESS Loading tracks — 1,790/2,369 DB keys (75.6%) — elapsed 20s — ETA 7s
+PROGRESS Loading tracks — 2,048/2,369 DB keys (86.4%) — elapsed 25s — ETA 4s
+PROGRESS Loading tracks — 2,190/2,369 DB keys (92.4%) — elapsed 30s — ETA 2s
+PROGRESS Loading tracks — 2,232/2,369 DB keys (94.2%) — elapsed 36s — ETA 2s
+PROGRESS Loading tracks — 2,289/2,369 DB keys (96.6%) — elapsed 41s — ETA 1s
+PROGRESS Preparing patch sampling — elapsed 0s
+PROGRESS Loading normal volumes onto GPU — elapsed 0s
+fiber links: 0 resolved
+pcls: 0 cross-patch, 0 unattached
+  cross-patch sampling groups: 
+  unattached sampling groups: 
+loading tracks from /workspace/ds/PHerc0826/tracks/PHerc0826_20250821151701_surface_m7_L0_th0.2.dbm
+loaded track crossing cache /workspace/ds/PHerc0826/tracks/PHerc0826_20250821151701_surface_m7_L0_th0.2.dbm.crossings.npz: 8384681 tracks, 47109552 directed records
+built TrackGraph: 8384681 tracks, 23554776 crossings in 3.9s
+loaded 558694 tracks within z-roi [6528, 7328)
+fitting 0 patches
+loading lasagna resident pools, group 2
+lasagna normals: resident pool 6,020/7,689 bricks of (32, 32, 32) x2 channel(s) (0.37 GiB) loaded in 0.1s from las_008_nx.ome.zarr.respool_g2_pair
+PROGRESS Building verified-patch GPU atlas — 0 patches — elapsed 0s
+PROGRESS Constructing spiral model — elapsed 0s
+PROGRESS Creating optimizer — elapsed 0s
+PROGRESS Synchronizing model across GPU workers — elapsed 0s
+PROGRESS Preparing tracks for optimization — 558,694 tracks — elapsed 0s
+PROGRESS Optimizing — 0/300 iterations (0.0%) — elapsed 0s
+PROGRESS Optimizing — 109/300 iterations (36.3%) — 21.7 it/s — elapsed 5s — ETA 9s
+PROGRESS Optimizing — 233/300 iterations (77.7%) — 23.2 it/s — elapsed 10s — ETA 3s
+PROGRESS Saving final checkpoint — checkpoint_fitted.ckpt — elapsed 0s
+PROGRESS Computing satisfaction metrics and outputs — elapsed 0s
+PROGRESS Evaluating verified patches — 0 patches — elapsed 0s
+PROGRESS Evaluating tracks — 558,694 tracks — elapsed 0s
+PROGRESS Transforming final mesh — 0/37 chunks (0.0%) — elapsed 0s
+PROGRESS Writing final mesh windings — 0/260 windings (0.0%) — elapsed 0s
+PROGRESS Writing final mesh windings — 260/260 windings (100.0%) — elapsed 1s — ETA 0s
+no outer-shell losses; using configured shell_outer_winding_idx = 130 for the dense and regularisation losses
+removing tracks near patches
+kept 558694 / 558694 tracks
+track radius loss: 558694/558694 tracks survive exclusion (radius 16.0); 27814297 points retained
+track crossings: using TrackGraph cache for 558694 surviving tracks
+track crossings: used cached CSR for 558694 surviving tracks
+track crossing index: 341098/558694 tracks connected, 2226226 directed crossings, 31.9 MiB
+track length bins: short <= 31.0 (186597), medium <= 65.1 (185962), long (186135); effective weights [0.0, 0.15, 0.85]
+theta topology ready (0.0s, peak RSS 3.85 GiB)
+trainable parameters: 69,485,231 (277.9 MB) - gradient volume all-reduced every step in distributed mode
+WARNING: loss_weight_dense_spacing_density > 0 but dense_spacing_mode='grad_mag'; this component runs only as part of the 'phase' bundle and is INACTIVE.
+track point spacing: 3520165 cached points, observed 2.00-60.00 voxels (limits 20-60; 1718771 mandatory-anchor exceptions; native)
+step 0: loss = 6952.8, umbilicus = 9.9, sym_dirichlet = 14.7, dense_normals = 43.1, min_spacing = 0.0, track_radius = 6885.1, track_dt = 0.0
+step 200: loss = 3248.3, umbilicus = 0.1, sym_dirichlet = 19.7, dense_normals = 24.7, min_spacing = 0.0, track_radius = 3203.8, track_dt = 0.0
+patch satisfaction: 0 patches, 0 quad centers, 0 forward + 0 inverse batches, 0.00s
+satisfied_patches = 0/0 (0.0%)
+satisfied_patches_area_weighted = 0.0/0.0 (0.0%)
+boundary_satisfied_patches = 0/0 (0.0%)
+satisfied_area = 0.0/0.0 (0.0%)
+satisfied_tracks = 56281/558694 (10.1%)
+satisfied_track_points = 9102497/27814297 (32.7%)
+save_mesh fitted: winding range [10, 130)
+splice rasterization: 0 eligible quads, 0 vertex batches, 0.00s

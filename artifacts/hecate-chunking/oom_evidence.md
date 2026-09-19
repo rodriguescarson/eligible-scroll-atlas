@@ -1,4 +1,13 @@
-# The Hecate out-of-memory failures were our own misconfiguration (16 Sep 2026)
+# The Hecate out-of-memory failures: cause measured (16 Sep 2026, corrected 19 Sep)
+
+**Correction, 19 September 2026.** This file first attributed the failures to batch-64 arithmetic (41.3 GiB for two fp32 jobs)
+and said nothing on the GPU scales with the canvas. The population ran bf16, where two jobs need 29.3 GiB on the canvases we had
+measured and would fit. The measured cause is different: on a real 47.3 megapixel render at bf16 batch 64, peak allocated memory
+is 12.00 GiB, the same as on small canvases, but peak **reserved** memory is 28.79 GiB against 14.63. Two such jobs cannot share a
+44.43 GiB card. Live tensors are flat in canvas size as the memory model below predicts; the caching allocator's reserve is not.
+Whether that comes from canvas size or from real rather than synthetic data is not separated. See `findings/hecate-memory-report.md`
+and `artifacts/hecate-3d/peakmem_w043_bf16_b64.log`. The paragraphs below are kept as first written, with the two wrong claims
+marked.
 
 Supersedes the earlier version of this file, which framed these failures as a missing capability and proposed bounded-memory
 tiling. A line-by-line memory model of `hecate.py` says that framing was wrong.
@@ -7,7 +16,8 @@ tiling. A line-by-line memory model of `hecate.py` says that framing was wrong.
 
 23 meshes failed with `torch.OutOfMemoryError` across three A40 pods running **two** inference processes each at
 `--batch-size 64`. The tool's own default is `--batch-size 1` (line 411). All 23 recovered when rerun alone. Every failure was a
-co-tenancy collision produced by our launch settings, not by any mesh being too large.
+co-tenancy collision produced by our launch settings, not by any mesh being too large. *(Corrected 19 Sep: it was large
+meshes. Their reserved memory roughly doubles; see the correction above.)*
 
 ## Why tiling the canvas would have saved nothing
 
@@ -59,10 +69,13 @@ bf16 takes 29 percent off peak reserved memory, not the half a full-precision sw
 finding that the two largest decoder operations, the trilinear upsample and the group norm, stay in float32 under autocast. It is
 also 40 percent faster on the largest canvas: 377 s against 623 s at batch 64.
 
-**Peak memory is identical across a twelvefold change in canvas area and halves exactly with batch size.** That is the
+**Peak memory is identical across a twelvefold change in canvas area and halves exactly with batch size.** *(Corrected 19 Sep:
+true of these synthetic canvases up to 29.8 megapixels and of live memory beyond them, not of reserved memory on a 47.3
+megapixel real render.)* That is the
 prediction from the line-by-line model, confirmed: nothing on the GPU scales with the canvas, so tiling it cannot save a byte.
 
-**What would have prevented all 23 failures.** Two concurrent jobs need twice the reserved figure plus context. At batch 64 that
+**What would have prevented all 23 failures.** *(Corrected 19 Sep: this arithmetic uses fp32 figures and small canvases, and
+does not explain the failures. See the correction above.)* Two concurrent jobs need twice the reserved figure plus context. At batch 64 that
 is 41.3 GiB against 44.43 GiB of card, with no headroom for the second process's fragmentation, which is exactly the collision we
 hit. At batch 32 it is 21.2 GiB, at batch 16 it is 11.2 GiB. Any of those would have run two jobs comfortably, at a cost of 1 to
 7 percent in wall time: on the largest canvas, 623 s at batch 64 against 641 s at 32 and 649 s at 16.
